@@ -1,16 +1,16 @@
 #include "ConnectFour.h"
-
+#include "Nokia5110.h"
 void WelcomeScene (void);
 
 //Selects either single or multi. mode
 // 1 = single, 2 = multi
 int SelectModeScene (void);
-//int selectMode();
+
 
 //select seed
 //Selects either player1 = X or player2 = O
-int SelectSeedScene();
-//char selectSeed();
+char SelectSeedScene();
+
 
 //returns 1 if the user choosed to be the master, 0 otherwise
 //int isMaster();
