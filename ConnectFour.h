@@ -5,7 +5,7 @@
 #define COLS 7
 
 typedef enum GameState{
-	P1Win, P2Win, Tie, Running, Waiting
+	P1WIN, P2WIN, TIE, RUNNING, WAITING
 } GameState;
 
 //Takes a 2D grid and returns current game state

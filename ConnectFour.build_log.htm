@@ -9,26 +9,34 @@ Project File Date:  05/31/2018
 <h2>Output:</h2>
 Build target 'ConncetFour'
 compiling ConnectFourMain.c...
-ConnectFour.h(20): warning:  #1-D: last line of file ends without a newline
-  #endif
-UserInterface.h(5): warning:  #1295-D: Deprecated declaration selectMode - give arg types
-  int selectMode();
-UserInterface.h(8): warning:  #1295-D: Deprecated declaration isMaster - give arg types
+UserInterface.h(14): warning:  #1295-D: Deprecated declaration SelectSeedScene - give arg types
+  char SelectSeedScene();
+UserInterface.h(18): warning:  #1295-D: Deprecated declaration isMaster - give arg types
   int isMaster();
-UserInterface.h(12): warning:  #1295-D: Deprecated declaration selectPlayer - give arg types
-  int selectPlayer();
-UserInterface.h(15): warning:  #1295-D: Deprecated declaration drawEmptyGrid - give arg types
+UserInterface.h(21): warning:  #1295-D: Deprecated declaration drawEmptyGrid - give arg types
   void drawEmptyGrid();
-UserInterface.h(21): warning:  #1295-D: Deprecated declaration waiting - give arg types
-  void waiting();
-UserInterface.h(24): warning:  #1-D: last line of file ends without a newline
-  void drawState(GameState);
-UserInterface.h(24): error:  #92: identifier-list parameters may only be used in a function definition
-  void drawState(GameState);
-ConnectFourMain.c(11): warning:  #1-D: last line of file ends without a newline
-  }
-ConnectFourMain.c: 8 warnings, 1 error
-".\ConnectFour.axf" - 1 Error(s), 8 Warning(s).
+UserInterface.h(27): warning:  #1295-D: Deprecated declaration WaitingScene - give arg types
+  void WaitingScene();
+UserInterface.h(33): warning:  #1-D: last line of file ends without a newline
+  void displaySlaveSeed (int turn) ;
+UARTHandler.h(5): warning:  #1295-D: Deprecated declaration receive - give arg types
+  char receive();
+ConnectFourMain.c(13): warning:  #1295-D: Deprecated declaration initialize - give arg types
+  void initialize();
+ConnectFourMain.c: 7 warnings, 0 errors
+linking...
+.\ConnectFour.axf: Error: L6218E: Undefined symbol SelectModeScene (referred from connectfourmain.o).
+.\ConnectFour.axf: Error: L6218E: Undefined symbol SelectSeedScene (referred from connectfourmain.o).
+.\ConnectFour.axf: Error: L6218E: Undefined symbol WelcomeScene (referred from connectfourmain.o).
+.\ConnectFour.axf: Error: L6218E: Undefined symbol addSeed (referred from connectfourmain.o).
+.\ConnectFour.axf: Error: L6218E: Undefined symbol bestPosition (referred from connectfourmain.o).
+.\ConnectFour.axf: Error: L6218E: Undefined symbol checkGameState (referred from connectfourmain.o).
+.\ConnectFour.axf: Error: L6218E: Undefined symbol drawSeed (referred from connectfourmain.o).
+.\ConnectFour.axf: Error: L6218E: Undefined symbol initialize (referred from connectfourmain.o).
+.\ConnectFour.axf: Error: L6218E: Undefined symbol isMaster (referred from connectfourmain.o).
+Not enough information to list image symbols.
+Finished: 1 information, 0 warning and 9 error messages.
+".\ConnectFour.axf" - 9 Error(s), 7 Warning(s).
 Target not created
 </pre>
 </body>

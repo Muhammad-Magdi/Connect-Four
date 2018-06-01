@@ -1,46 +1,74 @@
 #include "tm4c123gh6pm.h"
-#include "Nokia5110.h"
 #include "TExaS.h"
 #include "ConnectFour.h"
 #include "UserInterface.h"
 #include "UARTHandler.h"
+#include "string.h"
 
-int mode, masterMode, currentTurn, nextColumn;
+int mode, nextColumn;
 char gameGrid[ROWS][COLS];
 int columnHeight[COLS];
-char playerSeed, opponentSeed;
+char playerSeed, opponentSeed, currentTurn;
+GameState currentState;
 
 //Initializes the game
-void initialize();
+void initialize(void);
 //Adds a seed into the given Column
 void addSeed(char seed, int col);
 
 int main(void){
 	while(1){
 		initialize();
-		mode = selectMode();
+		WelcomeScene();
+		mode = SelectModeScene();
 		if(mode == 1){			//Single Player
-			playerSeed = selectSeed();
+			playerSeed = SelectSeedScene();
 			opponentSeed = (playerSeed == 'X' ? 'O' : 'X');
-			while(checkGameState(gameGrid) == RUNNING){
-				if(currentTurn == playerNumber){
+			while(currentState == RUNNING){
+				if(currentTurn == playerSeed){
 					//nextColumn = take Input
-					drawSeed(playerSeed, nextColumn);
 					addSeed(playerSeed, nextColumn);
 				}else{
 					nextColumn = bestPosition(gameGrid);
-					drawSeed(opponentSeed, nextColumn);
 					addSeed(opponentSeed, nextColumn);
 				}
-				currentTurn = (currentTurn%2)+1;		//Toggle Turn
+				currentTurn = (currentTurn == 'X' ? 'O' : 'X');		//Toggle Turn
+				currentState = checkGameState(gameGrid);
 			}
 		}else{							//Multi.
-			masterMode = isMaster();
-			if(masterMode){
-			
+			if(isMaster()){
+				//Choose a seed and tell the slave his seed
+				playerSeed = SelectSeedScene();
+				//TODO Tell slave his seed type
+				while(currentState == RUNNING){
+					if(currentTurn == playerSeed){
+						//nextColumn = take Input
+						//If the Player Entered #, run AI mode
+						addSeed(playerSeed, nextColumn);
+						//Tell the slave the column I played in
+					}else{
+						
+					}
+					currentTurn = (currentTurn == 'X' ? 'O' : 'X');		//Toggle Turn
+					currentState = checkGameState(gameGrid);
+				}
 			}else{
-			
+				
 			}
 		}
 	}
+}
+
+
+void initialize(void){
+	memset(gameGrid, 0, sizeof gameGrid);
+	memset(columnHeight, 0, sizeof columnHeight);
+	currentTurn = 'X';
+	currentState = RUNNING;
+}
+
+void addSeed(char seed, int col){
+	gameGrid[columnHeight[col]][col] = seed;
+	++columnHeight[col];
+	drawSeed(seed, col);
 }
