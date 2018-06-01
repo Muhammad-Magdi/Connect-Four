@@ -76,9 +76,9 @@ char SelectSeedScene(void)
 	Nokia5110_SetCursor (0,1);
 	Nokia5110_OutString ("Press:");
 	Nokia5110_SetCursor (0,2);
-	Nokia5110_OutString ("player 1 (X)");
+	Nokia5110_OutString ("X.player 1 .");
 	Nokia5110_SetCursor (0,3);
-	Nokia5110_OutString ("player 2 (O)");
+	Nokia5110_OutString ("O.player 2 .");
 	return PlayerSeed ;
 }
 void Delay100ms(unsigned long count){unsigned long volatile time;
@@ -94,18 +94,14 @@ void Delay100ms(unsigned long count){unsigned long volatile time;
 void WaitingScene(void)
 {
 	int i;
-	for (i=0;i<1;i=i+1)
+	
+	Nokia5110_Clear();
+	Nokia5110_SetCursor(1,2);
+	Nokia5110_OutString ("Waiting");
+	for (i=0;i<3;i=i+1)
 	{
-		Nokia5110_Clear();
-		Nokia5110_SetCursor(1,2);
-		Nokia5110_OutString ("Waiting");
 		Delay100ms(1);
 		Nokia5110_OutString (".");
-		Delay100ms(1);
-		Nokia5110_OutString (".");
-		Delay100ms(1);
-		Nokia5110_OutString (".");
-		Delay100ms(1);
 	}
 }
 int MSScene (void)
@@ -120,3 +116,13 @@ int MSScene (void)
 	return PlayerRole ;
 }
 
+void displaySlaveSeed (unsigned short turn) 
+{
+	char t='0'+turn;
+	Nokia5110_Clear();
+	Nokia5110_SetCursor (2,1);
+	Nokia5110_OutString ("You are");
+	Nokia5110_SetCursor (2,3);
+	Nokia5110_OutString ("PLAYER"); 
+	Nokia5110_OutChar(t);
+}
