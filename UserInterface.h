@@ -37,7 +37,7 @@ void drawSeed(char seed, int col);
 void WaitingScene(void);
 
 //Prints a screen with the given game state
-//void StateScene(GameState gameState);
+void StateScene(GameState gameState);
 
 //"You are player 1"
 void displaySlaveSeed (int turn) ;
