@@ -17,6 +17,7 @@ void initialize(void);
 void addSeed(char seed, int col);
 
 int main(void){
+	UARTInit();
 	while(1){
 		initialize();
 		WelcomeScene();

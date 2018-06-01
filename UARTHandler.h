@@ -1,5 +1,9 @@
+void UARTInit(void);
+
 //Sends a char through the UART
-void send(char c);
+void send(unsigned char c);
 
 //Listens and receives a char through out the UART
-char receive();
+unsigned char receive(void);
+
+#include "UARTHandler.c"
