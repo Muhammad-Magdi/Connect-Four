@@ -6,8 +6,7 @@
 //************************display functions**********************
 
 //nokia init
-void StuffInit (void);
-
+void NokiaInit (void);
 
 void WelcomeScene (void);
 
