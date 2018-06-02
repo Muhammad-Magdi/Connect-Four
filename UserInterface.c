@@ -90,14 +90,14 @@ void NokiaInit (void)
   	Nokia5110_Init();
 }
 
-void WelcomeScene (void)
+void welcomeScene (void)
 {
 	Nokia5110_ClearBuffer();
 	Nokia5110_DisplayBuffer();
 	Nokia5110_PrintBMP(17, 38,Logo, 0);
 	Nokia5110_DisplayBuffer();
 }
-int SelectModeScene (void)
+int selectModeScene (void)
 {
 	Nokia5110_Clear();
 	Nokia5110_SetCursor (2,1);
@@ -107,7 +107,7 @@ int SelectModeScene (void)
 	return PlayerTurn;
 }
 
-char SelectSeedScene(void)
+char selectSeedScene(void)
 {
 	Nokia5110_Clear();
 	Nokia5110_SetCursor (0,1);
@@ -128,7 +128,7 @@ void Delay100ms(unsigned long count){unsigned long volatile time;
   }
 }
 
-void WaitingScene(void)
+void waitingScene(void)
 {
 	int i;
 	
@@ -164,7 +164,7 @@ void displaySlaveSeed (unsigned short turn)
 	Nokia5110_OutChar(t);
 }
 
-void StateScene(GameState gameState)
+void stateScene(GameState gameState)
 {
 	unsigned short state = gameState;
 	char* statement;
@@ -189,17 +189,34 @@ void StateScene(GameState gameState)
 	Nokia5110_OutString (statement);
 }
 
-//handling the correct raw
-void drawSeed(char seed, int col)
+void drawSeed(char seed, int col ,int row)
 {
 	const unsigned char *Seed ;
 	if (seed=='X'||seed=='x') Seed=X;
 	else if (seed=='O'||seed=='o') Seed=O;
-	if (col>=0||col<=6)
-		Nokia5110_PrintBMP(PaddingX+BoxLineWidth*(col+1)+BoxWidth*col,(BoardHeight-PaddingY)-BoxLineWidth,Seed,0);
+	if (row > 5 || col < 0 ||col >6) //invalid
+		return ;
+	
+	Nokia5110_PrintBMP(PaddingX+BoxLineWidth*(col+1)+BoxWidth*col,(BoardHeight-PaddingY)-BoxLineWidth*(row+1)-BoxWidth*row,Seed,0);
 	Nokia5110_DisplayBuffer();
 
 }
+
+void connectingScene (void)
+{
+	int i;
+	
+	Nokia5110_Clear();
+	Nokia5110_SetCursor(0,2);
+	Nokia5110_OutString ("Connecting");
+	for (i=0;i<2;i=i+1)
+	{
+		Delay100ms(1);
+		Nokia5110_OutString (".");
+	}
+
+}
+
 
 void drawEmptyGrid(void)
 {
