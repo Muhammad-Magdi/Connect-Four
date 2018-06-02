@@ -1,3 +1,6 @@
+#include "UARTHandler.h"
+#include "tm4c123gh6pm.h"
+
 void UARTInit(void){
 	SYSCTL_RCGC1_R |= 0x00000002;  // activate UART1
   SYSCTL_RCGC2_R |= 0x00000004;  // activate port C
@@ -17,7 +20,7 @@ void UARTInit(void){
 
 void send(unsigned char c){
 	while((UART1_FR_R&0x0020) != 0);      // wait until TXFF is 0
-  UART1_DR_R = data;
+  UART1_DR_R = c;
 }
 
 unsigned char receive(void){

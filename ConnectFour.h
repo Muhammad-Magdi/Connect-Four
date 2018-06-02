@@ -12,6 +12,6 @@ typedef enum GameState{
 GameState checkGameState(char grid[ROWS][COLS]);
 
 //Takes a 2D grid and returns the best position -column number- to play in
-int bestPosition(char grid[ROWS][COLS]);
+int bestPosition(char grid[ROWS][COLS], char seed);
 
 #endif

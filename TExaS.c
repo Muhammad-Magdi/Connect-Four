@@ -1,3 +1,6 @@
+#ifndef TEXASC_H
+#define TEXASC_H
+
 // TExaS.c
 // Runs on LM4F120/TM4C123
 // Periodic timer interrupt data collection
@@ -553,3 +556,4 @@ void UART0_OutCharNonBlock(unsigned char data){
   UART0_DR_R = data;
 }
 
+#endif

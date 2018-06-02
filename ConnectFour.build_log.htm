@@ -9,34 +9,80 @@ Project File Date:  05/31/2018
 <h2>Output:</h2>
 Build target 'ConncetFour'
 compiling ConnectFourMain.c...
-UserInterface.h(14): warning:  #1295-D: Deprecated declaration SelectSeedScene - give arg types
-  char SelectSeedScene();
-UserInterface.h(18): warning:  #1295-D: Deprecated declaration isMaster - give arg types
-  int isMaster();
-UserInterface.h(21): warning:  #1295-D: Deprecated declaration drawEmptyGrid - give arg types
-  void drawEmptyGrid();
-UserInterface.h(27): warning:  #1295-D: Deprecated declaration WaitingScene - give arg types
-  void WaitingScene();
-UserInterface.h(33): warning:  #1-D: last line of file ends without a newline
+TExaS.h(34): error:  #101: "DisplayType" has already been declared in the current scope
+  enum DisplayType{
+TExaS.h(35): error:  #101: "UART0_Emulate_Nokia5110_NoScope" has already been declared in the current scope
+    UART0_Emulate_Nokia5110_NoScope,
+TExaS.h(36): error:  #101: "SSI0_Real_Nokia5110_Scope" has already been declared in the current scope
+    SSI0_Real_Nokia5110_Scope,
+TExaS.h(37): error:  #101: "SSI0_Real_Nokia5110_NoScope" has already been declared in the current scope
+    SSI0_Real_Nokia5110_NoScope,
+TExaS.h(38): error:  #101: "NoLCD_NoScope" has already been declared in the current scope
+    NoLCD_NoScope
+TExaS.h(47): error:  #147-D: declaration is incompatible with "void TExaS_Init(enum DisplayType)" (declared at line 47)
+  void TExaS_Init(enum DisplayType display);
+ConnectFour.h(42): error:  #20: identifier "GameState" is undefined
+  void stateScene(GameState gameState);
+ConnectFour.h(48): warning:  #1-D: last line of file ends without a newline
+  void Delay100ms(unsigned long count); 
+TExaS.h(34): error:  #101: "DisplayType" has already been declared in the current scope
+  enum DisplayType{
+TExaS.h(35): error:  #101: "UART0_Emulate_Nokia5110_NoScope" has already been declared in the current scope
+    UART0_Emulate_Nokia5110_NoScope,
+TExaS.h(36): error:  #101: "SSI0_Real_Nokia5110_Scope" has already been declared in the current scope
+    SSI0_Real_Nokia5110_Scope,
+TExaS.h(37): error:  #101: "SSI0_Real_Nokia5110_NoScope" has already been declared in the current scope
+    SSI0_Real_Nokia5110_NoScope,
+TExaS.h(38): error:  #101: "NoLCD_NoScope" has already been declared in the current scope
+    NoLCD_NoScope
+TExaS.h(47): error:  #147-D: declaration is incompatible with "void TExaS_Init(enum DisplayType)" (declared at line 47)
+  void TExaS_Init(enum DisplayType display);
+Nokia5110.h(71): error:  #148: variable "ASCII" has already been initialized
+  static const char ASCII[][5] = {
+ConnectFour.h(42): error:  #20: identifier "GameState" is undefined
+  void stateScene(GameState gameState);
+ConnectFour.h(48): warning:  #1-D: last line of file ends without a newline
+  void Delay100ms(unsigned long count); 
+TExaS.h(34): error:  #101: "DisplayType" has already been declared in the current scope
+  enum DisplayType{
+TExaS.h(35): error:  #101: "UART0_Emulate_Nokia5110_NoScope" has already been declared in the current scope
+    UART0_Emulate_Nokia5110_NoScope,
+TExaS.h(36): error:  #101: "SSI0_Real_Nokia5110_Scope" has already been declared in the current scope
+    SSI0_Real_Nokia5110_Scope,
+TExaS.h(37): error:  #101: "SSI0_Real_Nokia5110_NoScope" has already been declared in the current scope
+    SSI0_Real_Nokia5110_NoScope,
+TExaS.h(38): error:  #101: "NoLCD_NoScope" has already been declared in the current scope
+    NoLCD_NoScope
+TExaS.h(47): error:  #147-D: declaration is incompatible with "void TExaS_Init(enum DisplayType)" (declared at line 47)
+  void TExaS_Init(enum DisplayType display);
+Nokia5110.h(71): error:  #148: variable "ASCII" has already been initialized
+  static const char ASCII[][5] = {
+UserInterface.h(40): error:  #20: identifier "GameState" is undefined
+  void StateScene(GameState gameState);
+UserInterface.h(43): error:  #147-D: declaration is incompatible with "void displaySlaveSeed(unsigned short)" (declared at line 45 of "ConnectFour.h")
   void displaySlaveSeed (int turn) ;
-UARTHandler.h(5): warning:  #1295-D: Deprecated declaration receive - give arg types
-  char receive();
-ConnectFourMain.c(13): warning:  #1295-D: Deprecated declaration initialize - give arg types
-  void initialize();
-ConnectFourMain.c: 7 warnings, 0 errors
-linking...
-.\ConnectFour.axf: Error: L6218E: Undefined symbol SelectModeScene (referred from connectfourmain.o).
-.\ConnectFour.axf: Error: L6218E: Undefined symbol SelectSeedScene (referred from connectfourmain.o).
-.\ConnectFour.axf: Error: L6218E: Undefined symbol WelcomeScene (referred from connectfourmain.o).
-.\ConnectFour.axf: Error: L6218E: Undefined symbol addSeed (referred from connectfourmain.o).
-.\ConnectFour.axf: Error: L6218E: Undefined symbol bestPosition (referred from connectfourmain.o).
-.\ConnectFour.axf: Error: L6218E: Undefined symbol checkGameState (referred from connectfourmain.o).
-.\ConnectFour.axf: Error: L6218E: Undefined symbol drawSeed (referred from connectfourmain.o).
-.\ConnectFour.axf: Error: L6218E: Undefined symbol initialize (referred from connectfourmain.o).
-.\ConnectFour.axf: Error: L6218E: Undefined symbol isMaster (referred from connectfourmain.o).
-Not enough information to list image symbols.
-Finished: 1 information, 0 warning and 9 error messages.
-".\ConnectFour.axf" - 9 Error(s), 7 Warning(s).
+ConnectFourMain.c(9): error:  #20: identifier "ROWS" is undefined
+  char gameGrid[ROWS][COLS];
+ConnectFourMain.c(9): error:  #20: identifier "COLS" is undefined
+  char gameGrid[ROWS][COLS];
+ConnectFourMain.c(12): error:  #20: identifier "GameState" is undefined
+  GameState currentState;
+ConnectFourMain.c(29): error:  #20: identifier "RUNNING" is undefined
+                        while(currentState == RUNNING){
+ConnectFourMain.c(34): warning:  #223-D: function "bestPosition" declared implicitly
+                                        nextColumn = bestPosition(gameGrid, currentTurn);
+ConnectFourMain.c(38): warning:  #223-D: function "checkGameState" declared implicitly
+                                currentState = checkGameState(gameGrid);
+ConnectFourMain.c(41): warning:  #223-D: function "isMaster" declared implicitly
+                        if(isMaster()){
+ConnectFourMain.c(48): error:  #20: identifier "RUNNING" is undefined
+                                while(currentState == RUNNING){
+ConnectFourMain.c(58): warning:  #223-D: function "checkGameState" declared implicitly
+                                        currentState = checkGameState(gameGrid);
+ConnectFourMain.c(76): error:  #20: identifier "RUNNING" is undefined
+        currentState = RUNNING;
+ConnectFourMain.c: 6 warnings, 30 errors
+".\ConnectFour.axf" - 30 Error(s), 6 Warning(s).
 Target not created
 </pre>
 </body>
