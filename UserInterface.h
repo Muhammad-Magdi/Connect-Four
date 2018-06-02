@@ -8,11 +8,12 @@
 //nokia init
 void NokiaInit (void);
 
-void WelcomeScene (void);
+
+void welcomeScene (void);
 
 //Selects either single or multi. mode
 // 1 = single, 2 = multi
-int SelectModeScene (void);
+int selectModeScene (void);
 
 //Selects either Master or Slave
 // 1 = Master, 2 = Salve
@@ -20,7 +21,7 @@ int MSScene (void);
 
 //select seed
 //Selects either player1 = X or player2 = O
-char SelectSeedScene(void);
+char selectSeedScene(void);
 
 
 //returns 1 if the user choosed to be the master, 0 otherwise
@@ -30,16 +31,20 @@ char SelectSeedScene(void);
 void drawEmptyGrid(void);
 
 //Draws the seed[X, O] int column number col
-void drawSeed(char seed, int col);
+void drawSeed(char seed, int col , int row);
 
 //Waiting Screen
-void WaitingScene(void);
+void waitingScene(void);
+
+//Waiting Screen
+void connectingScene(void);
 
 //Prints a screen with the given game state
-void StateScene(GameState gameState);
+void stateScene(GameState gameState);
 
 //"You are player 1"
-void displaySlaveSeed (int turn) ;
+void displaySlaveSeed (unsigned short turn) ;
 
 // time delay in 0.1 seconds
 void Delay100ms(unsigned long count); 
+
