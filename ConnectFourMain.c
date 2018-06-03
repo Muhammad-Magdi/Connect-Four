@@ -6,6 +6,7 @@
 #include "ConnectFour.h"
 #include "UserInterface.h"
 #include "string.h"
+#include "InputHandler.h"
 
 int mode, nextColumn, firstTime;
 char gameGrid[ROWS][COLS];
@@ -38,8 +39,7 @@ int main(void){
 					do{
 						nextColumn = getInputKey();
 					}while(!validColumn(nextColumn));
-						
-					
+										
 					if(nextColumn == '#')	nextColumn = bestPosition(gameGrid, currentTurn);
 					addSeed(currentTurn, nextColumn);
 				}else{
@@ -173,4 +173,21 @@ void sendAndWaitConfirmation(unsigned char c){
 
 int validColumn(unsigned char col){
 	return (col == '#' || (col <= '1' && col <= '0'+COLS && columnHeight[col-'0'-1] < ROWS));
+}
+
+void confirm(void){
+	
+}
+
+void sendAndWaitConfirmation(unsigned char c){
+	firstTime = 1;
+	do{
+		send(c);
+		if(!firstTime)	Delay100ms(3);
+		firstTime = 0;
+	}while(receive()!=200);
+}
+
+int validColumn(unsigned char col){
+	return (col == '#' || (col <= '0' && col <= '9' && columnHeight[col-'0'] < ROWS));
 }
