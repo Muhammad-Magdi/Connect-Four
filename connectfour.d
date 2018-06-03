@@ -1,4 +1,4 @@
 .\connectfour.o: ConnectFour.c
-.\connectfour.o: tm4c123gh6pm.h
-.\connectfour.o: Nokia5110.h
-.\connectfour.o: TExaS.h
+.\connectfour.o: C:\Keil\ARM\ARMCC\bin\..\include\stdio.h
+.\connectfour.o: C:\Keil\ARM\ARMCC\bin\..\include\stdlib.h
+.\connectfour.o: ConnectFour.h

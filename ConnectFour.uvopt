@@ -208,10 +208,10 @@
       <FileType>1</FileType>
       <tvExp>1</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>15</ColumnNumber>
+      <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>105</TopLine>
-      <CurrentLine>122</CurrentLine>
+      <TopLine>156</TopLine>
+      <CurrentLine>15</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\ConnectFourMain.c</PathWithFileName>
       <FilenameWithoutPath>ConnectFourMain.c</FilenameWithoutPath>
@@ -231,6 +231,70 @@
       <bDave2>0</bDave2>
       <PathWithFileName>.\TExaS.c</PathWithFileName>
       <FilenameWithoutPath>TExaS.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
+    </File>
+    <File>
+      <GroupNumber>1</GroupNumber>
+      <FileNumber>5</FileNumber>
+      <FileType>1</FileType>
+      <tvExp>0</tvExp>
+      <Focus>0</Focus>
+      <ColumnNumber>20</ColumnNumber>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <TopLine>1</TopLine>
+      <CurrentLine>7</CurrentLine>
+      <bDave2>0</bDave2>
+      <PathWithFileName>.\InputHandler.c</PathWithFileName>
+      <FilenameWithoutPath>InputHandler.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
+    </File>
+    <File>
+      <GroupNumber>1</GroupNumber>
+      <FileNumber>6</FileNumber>
+      <FileType>1</FileType>
+      <tvExp>0</tvExp>
+      <Focus>0</Focus>
+      <ColumnNumber>19</ColumnNumber>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <TopLine>1</TopLine>
+      <CurrentLine>26</CurrentLine>
+      <bDave2>0</bDave2>
+      <PathWithFileName>.\UARTHandler.c</PathWithFileName>
+      <FilenameWithoutPath>UARTHandler.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
+    </File>
+    <File>
+      <GroupNumber>1</GroupNumber>
+      <FileNumber>7</FileNumber>
+      <FileType>1</FileType>
+      <tvExp>0</tvExp>
+      <Focus>0</Focus>
+      <ColumnNumber>3</ColumnNumber>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <TopLine>154</TopLine>
+      <CurrentLine>155</CurrentLine>
+      <bDave2>0</bDave2>
+      <PathWithFileName>.\UserInterface.c</PathWithFileName>
+      <FilenameWithoutPath>UserInterface.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
+    </File>
+    <File>
+      <GroupNumber>1</GroupNumber>
+      <FileNumber>8</FileNumber>
+      <FileType>1</FileType>
+      <tvExp>0</tvExp>
+      <Focus>0</Focus>
+      <ColumnNumber>1</ColumnNumber>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <TopLine>124</TopLine>
+      <CurrentLine>145</CurrentLine>
+      <bDave2>0</bDave2>
+      <PathWithFileName>.\ConnectFour.c</PathWithFileName>
+      <FilenameWithoutPath>ConnectFour.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>

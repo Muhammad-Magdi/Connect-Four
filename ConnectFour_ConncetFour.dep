@@ -2,14 +2,32 @@ Dependencies for Project 'ConnectFour', Target 'ConncetFour': (DO NOT MODIFY !)
 F (.\startup.s)(0x5B0F2E30)(--cpu Cortex-M4 --pd "__RTX SETA 1" --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\Luminary--list .\startup.lst --xref -o .\startup.o --depend .\startup.d)
 F (.\Nokia5110.c)(0x5AD8446F)(-c --cpu Cortex-M4 -D__RTX -D__EVAL -g -O0 --apcs=interwork --split_sections --signed_chars -I.. -I..\..\..-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\Luminary-Drvmdk -DPART_LM4F120H5QR-o .\nokia5110.o --omf_browse .\nokia5110.crf --depend .\nokia5110.d)
 I (Nokia5110.h)(0x5343F13E)
-F (.\ConnectFourMain.c)(0x5B12601E)(-c --cpu Cortex-M4 -D__RTX -D__EVAL -g -O0 --apcs=interwork --split_sections --signed_chars -I.. -I..\..\..-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\Luminary-Drvmdk -DPART_LM4F120H5QR-o .\connectfourmain.o --omf_browse .\connectfourmain.crf --depend .\connectfourmain.d)
-I (tm4c123gh6pm.h)(0x5ACF16DE)
+F (.\ConnectFourMain.c)(0x5B13C98B)(-c --cpu Cortex-M4 -D__RTX -D__EVAL -g -O0 --apcs=interwork --split_sections --signed_chars -I.. -I..\..\..-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\Luminary-Drvmdk -DPART_LM4F120H5QR-o .\connectfourmain.o --omf_browse .\connectfourmain.crf --depend .\connectfourmain.d)
+I (tm4c123gh6pm.h)(0x5B130E45)
 I (TExaS.h)(0x569B4718)
-I (ConnectFour.h)(0x5B126032)
 I (Nokia5110.h)(0x5343F13E)
-I (UserInterface.h)(0x5B124F63)
-I (UARTHandler.h)(0x5B125FBE)
-I (UARTHandler.c)(0x5B12605F)
+I (UARTHandler.h)(0x5B13CA9D)
+I (InputHandler.h)(0x5B13CA77)
+I (ConnectFour.h)(0x5B13CCBC)
+I (UserInterface.h)(0x5B13CA6C)
 I (C:\Keil\ARM\ARMCC\include\string.h)(0x51C819B4)
-F (.\TExaS.c)(0x569B4738)(-c --cpu Cortex-M4 -D__RTX -D__EVAL -g -O0 --apcs=interwork --split_sections --signed_chars -I.. -I..\..\..-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\Luminary-Drvmdk -DPART_LM4F120H5QR-o .\texas.o --omf_browse .\texas.crf --depend .\texas.d)
+F (.\TExaS.c)(0x5B13149C)(-c --cpu Cortex-M4 -D__RTX -D__EVAL -g -O0 --apcs=interwork --split_sections --signed_chars -I.. -I..\..\..-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\Luminary-Drvmdk -DPART_LM4F120H5QR-o .\texas.o --omf_browse .\texas.crf --depend .\texas.d)
 I (TExaS.h)(0x569B4718)
+F (.\InputHandler.c)(0x5B13C946)(-c --cpu Cortex-M4 -D__RTX -D__EVAL -g -O0 --apcs=interwork --split_sections --signed_chars -I.. -I..\..\..-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\Luminary-Drvmdk -DPART_LM4F120H5QR-o .\inputhandler.o --omf_browse .\inputhandler.crf --depend .\inputhandler.d)
+I (InputHandler.h)(0x5B13CA77)
+I (tm4c123gh6pm.h)(0x5B130E45)
+I (TExaS.h)(0x569B4718)
+F (.\UARTHandler.c)(0x5B131A19)(-c --cpu Cortex-M4 -D__RTX -D__EVAL -g -O0 --apcs=interwork --split_sections --signed_chars -I.. -I..\..\..-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\Luminary-Drvmdk -DPART_LM4F120H5QR-o .\uarthandler.o --omf_browse .\uarthandler.crf --depend .\uarthandler.d)
+I (UARTHandler.h)(0x5B13CA9D)
+I (tm4c123gh6pm.h)(0x5B130E45)
+F (.\UserInterface.c)(0x5B13C9EE)(-c --cpu Cortex-M4 -D__RTX -D__EVAL -g -O0 --apcs=interwork --split_sections --signed_chars -I.. -I..\..\..-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\Luminary-Drvmdk -DPART_LM4F120H5QR-o .\userinterface.o --omf_browse .\userinterface.crf --depend .\userinterface.d)
+I (tm4c123gh6pm.h)(0x5B130E45)
+I (TExaS.h)(0x569B4718)
+I (UserInterface.h)(0x5B13CA6C)
+I (ConnectFour.h)(0x5B13CCBC)
+I (Nokia5110.h)(0x5343F13E)
+I (InputHandler.h)(0x5B13CA77)
+F (.\ConnectFour.c)(0x5B13CFB0)(-c --cpu Cortex-M4 -D__RTX -D__EVAL -g -O0 --apcs=interwork --split_sections --signed_chars -I.. -I..\..\..-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\Luminary-Drvmdk -DPART_LM4F120H5QR-o .\connectfour.o --omf_browse .\connectfour.crf --depend .\connectfour.d)
+I (C:\Keil\ARM\ARMCC\include\stdio.h)(0x51C819B4)
+I (C:\Keil\ARM\ARMCC\include\stdlib.h)(0x51C819B4)
+I (ConnectFour.h)(0x5B13CCBC)

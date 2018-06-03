@@ -416,14 +416,9 @@
               <FilePath>.\Nokia5110.c</FilePath>
             </File>
             <File>
-              <FileName>random.s</FileName>
-              <FileType>2</FileType>
-              <FilePath>.\random.s</FilePath>
-            </File>
-            <File>
-              <FileName>ConnectFour.c</FileName>
+              <FileName>ConnectFourMain.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\ConnectFour.c</FilePath>
+              <FilePath>.\ConnectFourMain.c</FilePath>
             </File>
             <File>
               <FileName>TExaS.c</FileName>

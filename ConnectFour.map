@@ -29,8 +29,37 @@ Section Cross References
     nokia5110.o(i.Nokia5110_OutUDec) refers to nokia5110.o(i.Nokia5110_OutChar) for Nokia5110_OutChar
     nokia5110.o(i.Nokia5110_PrintBMP) refers to nokia5110.o(.bss) for Screen
     nokia5110.o(i.Nokia5110_SetCursor) refers to nokia5110.o(i.lcdwrite) for lcdwrite
+    connectfourmain.o(i.addSeed) refers to userinterface.o(i.drawSeed) for drawSeed
+    connectfourmain.o(i.addSeed) refers to connectfourmain.o(.bss) for columnHeight
+    connectfourmain.o(i.initialize) refers to rt_memclr_w.o(.text) for __aeabi_memclr4
+    connectfourmain.o(i.initialize) refers to connectfourmain.o(.bss) for gameGrid
+    connectfourmain.o(i.initialize) refers to connectfourmain.o(.data) for currentTurn
+    connectfourmain.o(i.main) refers to uarthandler.o(i.UARTInit) for UARTInit
+    connectfourmain.o(i.main) refers to inputhandler.o(i.keyPadInit) for keyPadInit
+    connectfourmain.o(i.main) refers to connectfourmain.o(i.initialize) for initialize
+    connectfourmain.o(i.main) refers to userinterface.o(i.welcomeScene) for welcomeScene
+    connectfourmain.o(i.main) refers to userinterface.o(i.selectModeScene) for selectModeScene
+    connectfourmain.o(i.main) refers to userinterface.o(i.selectSeedScene) for selectSeedScene
+    connectfourmain.o(i.main) refers to userinterface.o(i.drawEmptyGrid) for drawEmptyGrid
+    connectfourmain.o(i.main) refers to inputhandler.o(i.getInputKey) for getInputKey
+    connectfourmain.o(i.main) refers to connectfourmain.o(i.validColumn) for validColumn
+    connectfourmain.o(i.main) refers to connectfour.o(i.bestPosition) for bestPosition
+    connectfourmain.o(i.main) refers to connectfourmain.o(i.addSeed) for addSeed
+    connectfourmain.o(i.main) refers to userinterface.o(i.stateScene) for stateScene
+    connectfourmain.o(i.main) refers to userinterface.o(i.MSScene) for MSScene
+    connectfourmain.o(i.main) refers to userinterface.o(i.connectingScene) for connectingScene
+    connectfourmain.o(i.main) refers to connectfourmain.o(i.sendAndWaitConfirmation) for sendAndWaitConfirmation
+    connectfourmain.o(i.main) refers to uarthandler.o(i.send) for send
+    connectfourmain.o(i.main) refers to uarthandler.o(i.receive) for receive
+    connectfourmain.o(i.main) refers to userinterface.o(i.displaySlaveSeed) for displaySlaveSeed
+    connectfourmain.o(i.main) refers to userinterface.o(i.Delay100ms) for Delay100ms
     connectfourmain.o(i.main) refers to connectfourmain.o(.data) for mode
     connectfourmain.o(i.main) refers to connectfourmain.o(.bss) for gameGrid
+    connectfourmain.o(i.sendAndWaitConfirmation) refers to uarthandler.o(i.send) for send
+    connectfourmain.o(i.sendAndWaitConfirmation) refers to userinterface.o(i.Delay100ms) for Delay100ms
+    connectfourmain.o(i.sendAndWaitConfirmation) refers to uarthandler.o(i.receive) for receive
+    connectfourmain.o(i.sendAndWaitConfirmation) refers to connectfourmain.o(.data) for firstTime
+    connectfourmain.o(i.validColumn) refers to connectfourmain.o(.bss) for columnHeight
     texas.o(i.SetCode) refers to texas.o(.bss) for TExaS
     texas.o(i.SetCourse) refers to texas.o(.bss) for TExaS
     texas.o(i.SetMode) refers to texas.o(.bss) for TExaS
@@ -45,6 +74,69 @@ Section Cross References
     texas.o(i.TExaS_Init) refers to texas.o(.data) for LastMode
     texas.o(i.Timer5A_Handler) refers to texas.o(i.ADC1_In) for ADC1_In
     texas.o(i.Timer5A_Handler) refers to texas.o(.data) for TExaS_Period
+    inputhandler.o(i.getInputKey) refers to inputhandler.o(.constdata) for .constdata
+    userinterface.o(i.MSScene) refers to nokia5110.o(i.Nokia5110_Clear) for Nokia5110_Clear
+    userinterface.o(i.MSScene) refers to nokia5110.o(i.Nokia5110_SetCursor) for Nokia5110_SetCursor
+    userinterface.o(i.MSScene) refers to nokia5110.o(i.Nokia5110_OutString) for Nokia5110_OutString
+    userinterface.o(i.MSScene) refers to inputhandler.o(i.getInputKey) for getInputKey
+    userinterface.o(i.MSScene) refers to userinterface.o(.data) for PlayerRole
+    userinterface.o(i.NokiaInit) refers to texas.o(i.TExaS_Init) for TExaS_Init
+    userinterface.o(i.NokiaInit) refers to nokia5110.o(i.Nokia5110_Init) for Nokia5110_Init
+    userinterface.o(i.connectingScene) refers to nokia5110.o(i.Nokia5110_Clear) for Nokia5110_Clear
+    userinterface.o(i.connectingScene) refers to nokia5110.o(i.Nokia5110_SetCursor) for Nokia5110_SetCursor
+    userinterface.o(i.connectingScene) refers to nokia5110.o(i.Nokia5110_OutString) for Nokia5110_OutString
+    userinterface.o(i.connectingScene) refers to userinterface.o(i.Delay100ms) for Delay100ms
+    userinterface.o(i.displaySlaveSeed) refers to nokia5110.o(i.Nokia5110_Clear) for Nokia5110_Clear
+    userinterface.o(i.displaySlaveSeed) refers to nokia5110.o(i.Nokia5110_SetCursor) for Nokia5110_SetCursor
+    userinterface.o(i.displaySlaveSeed) refers to nokia5110.o(i.Nokia5110_OutString) for Nokia5110_OutString
+    userinterface.o(i.displaySlaveSeed) refers to nokia5110.o(i.Nokia5110_OutChar) for Nokia5110_OutChar
+    userinterface.o(i.drawEmptyGrid) refers to nokia5110.o(i.Nokia5110_ClearBuffer) for Nokia5110_ClearBuffer
+    userinterface.o(i.drawEmptyGrid) refers to nokia5110.o(i.Nokia5110_DisplayBuffer) for Nokia5110_DisplayBuffer
+    userinterface.o(i.drawEmptyGrid) refers to nokia5110.o(i.Nokia5110_PrintBMP) for Nokia5110_PrintBMP
+    userinterface.o(i.drawEmptyGrid) refers to userinterface.o(.data) for BoardHeight
+    userinterface.o(i.drawEmptyGrid) refers to userinterface.o(.constdata) for Cell
+    userinterface.o(i.drawSeed) refers to nokia5110.o(i.Nokia5110_PrintBMP) for Nokia5110_PrintBMP
+    userinterface.o(i.drawSeed) refers to nokia5110.o(i.Nokia5110_DisplayBuffer) for Nokia5110_DisplayBuffer
+    userinterface.o(i.drawSeed) refers to userinterface.o(.constdata) for X
+    userinterface.o(i.drawSeed) refers to userinterface.o(.data) for BoardHeight
+    userinterface.o(i.selectModeScene) refers to nokia5110.o(i.Nokia5110_Clear) for Nokia5110_Clear
+    userinterface.o(i.selectModeScene) refers to nokia5110.o(i.Nokia5110_SetCursor) for Nokia5110_SetCursor
+    userinterface.o(i.selectModeScene) refers to nokia5110.o(i.Nokia5110_OutString) for Nokia5110_OutString
+    userinterface.o(i.selectModeScene) refers to inputhandler.o(i.getInputKey) for getInputKey
+    userinterface.o(i.selectModeScene) refers to userinterface.o(.data) for PlayerTurn
+    userinterface.o(i.selectSeedScene) refers to nokia5110.o(i.Nokia5110_Clear) for Nokia5110_Clear
+    userinterface.o(i.selectSeedScene) refers to nokia5110.o(i.Nokia5110_SetCursor) for Nokia5110_SetCursor
+    userinterface.o(i.selectSeedScene) refers to nokia5110.o(i.Nokia5110_OutString) for Nokia5110_OutString
+    userinterface.o(i.selectSeedScene) refers to inputhandler.o(i.getInputKey) for getInputKey
+    userinterface.o(i.selectSeedScene) refers to userinterface.o(.data) for PlayerSeed
+    userinterface.o(i.stateScene) refers to nokia5110.o(i.Nokia5110_Clear) for Nokia5110_Clear
+    userinterface.o(i.stateScene) refers to nokia5110.o(i.Nokia5110_SetCursor) for Nokia5110_SetCursor
+    userinterface.o(i.stateScene) refers to nokia5110.o(i.Nokia5110_OutString) for Nokia5110_OutString
+    userinterface.o(i.stateScene) refers to userinterface.o(.data) for PlayerSeed
+    userinterface.o(i.waitingScene) refers to nokia5110.o(i.Nokia5110_Clear) for Nokia5110_Clear
+    userinterface.o(i.waitingScene) refers to nokia5110.o(i.Nokia5110_SetCursor) for Nokia5110_SetCursor
+    userinterface.o(i.waitingScene) refers to nokia5110.o(i.Nokia5110_OutString) for Nokia5110_OutString
+    userinterface.o(i.waitingScene) refers to userinterface.o(i.Delay100ms) for Delay100ms
+    userinterface.o(i.welcomeScene) refers to nokia5110.o(i.Nokia5110_ClearBuffer) for Nokia5110_ClearBuffer
+    userinterface.o(i.welcomeScene) refers to nokia5110.o(i.Nokia5110_DisplayBuffer) for Nokia5110_DisplayBuffer
+    userinterface.o(i.welcomeScene) refers to nokia5110.o(i.Nokia5110_PrintBMP) for Nokia5110_PrintBMP
+    userinterface.o(i.welcomeScene) refers to userinterface.o(.constdata) for Logo
+    connectfour.o(i.bestMoveP1) refers to connectfour.o(i.minimax) for minimax
+    connectfour.o(i.bestMoveP1) refers to connectfour.o(.data) for INF
+    connectfour.o(i.bestMoveP1) refers to connectfour.o(.bss) for col
+    connectfour.o(i.bestMoveP2) refers to connectfour.o(i.minimax) for minimax
+    connectfour.o(i.bestMoveP2) refers to connectfour.o(.data) for INF
+    connectfour.o(i.bestMoveP2) refers to connectfour.o(.bss) for col
+    connectfour.o(i.bestPosition) refers to connectfour.o(i.bestMoveP1) for bestMoveP1
+    connectfour.o(i.bestPosition) refers to connectfour.o(i.bestMoveP2) for bestMoveP2
+    connectfour.o(i.evaluate) refers to connectfour.o(.data) for player1
+    connectfour.o(i.isMovesLeft) refers to connectfour.o(.bss) for col
+    connectfour.o(i.minimax) refers to connectfour.o(i.evaluate) for evaluate
+    connectfour.o(i.minimax) refers to connectfour.o(i.isMovesLeft) for isMovesLeft
+    connectfour.o(i.minimax) refers to connectfour.o(i.max) for max
+    connectfour.o(i.minimax) refers to connectfour.o(i.min) for min
+    connectfour.o(i.minimax) refers to connectfour.o(.data) for INF
+    connectfour.o(i.minimax) refers to connectfour.o(.bss) for col
     __main.o(!!!main) refers to rtentry.o(.ARM.Collect$$rtentry$$00000000) for __rt_entry
     rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to rtentry2.o(.ARM.Collect$$rtentry$$0000000A) for __rt_entry_li
     rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to rtentry2.o(.ARM.Collect$$rtentry$$0000000D) for __rt_entry_main
@@ -147,19 +239,9 @@ Section Cross References
 
 Removing Unused input sections from the image.
 
-    Removing nokia5110.o(i.Nokia5110_Clear), (32 bytes).
-    Removing nokia5110.o(i.Nokia5110_ClearBuffer), (24 bytes).
-    Removing nokia5110.o(i.Nokia5110_DisplayBuffer), (16 bytes).
-    Removing nokia5110.o(i.Nokia5110_DrawFullImage), (34 bytes).
     Removing nokia5110.o(i.Nokia5110_Init), (364 bytes).
-    Removing nokia5110.o(i.Nokia5110_OutChar), (56 bytes).
-    Removing nokia5110.o(i.Nokia5110_OutString), (22 bytes).
     Removing nokia5110.o(i.Nokia5110_OutUDec), (412 bytes).
-    Removing nokia5110.o(i.Nokia5110_PrintBMP), (424 bytes).
-    Removing nokia5110.o(i.Nokia5110_SetCursor), (48 bytes).
-    Removing nokia5110.o(i.lcdwrite), (76 bytes).
-    Removing nokia5110.o(.bss), (504 bytes).
-    Removing nokia5110.o(.constdata), (480 bytes).
+    Removing connectfourmain.o(i.confirm), (2 bytes).
     Removing connectfourmain.o(.constdata), (480 bytes).
     Removing texas.o(i.ADC1_Init), (212 bytes).
     Removing texas.o(i.PLL_Init), (124 bytes).
@@ -178,8 +260,10 @@ Removing Unused input sections from the image.
     Removing texas.o(i.copy), (18 bytes).
     Removing texas.o(.bss), (56 bytes).
     Removing texas.o(.constdata), (360 bytes).
+    Removing userinterface.o(i.NokiaInit), (14 bytes).
+    Removing userinterface.o(i.waitingScene), (56 bytes).
 
-31 unused section(s) (total 4634 bytes) removed from the image.
+23 unused section(s) (total 2990 bytes) removed from the image.
 
 ==============================================================================
 
@@ -187,86 +271,134 @@ Memory Map of the image
 
   Image Entry point : 0x00000000
 
-  Load Region LR_1 (Base: 0x00000000, Size: 0x000004c8, Max: 0xffffffff, ABSOLUTE)
+  Load Region LR_1 (Base: 0x00000000, Size: 0x00002008, Max: 0xffffffff, ABSOLUTE)
 
-    Execution Region ER_RO (Base: 0x00000000, Size: 0x00000484, Max: 0xffffffff, ABSOLUTE)
+    Execution Region ER_RO (Base: 0x00000000, Size: 0x00001f98, Max: 0xffffffff, ABSOLUTE)
 
     Base Addr    Size         Type   Attr      Idx    E Section Name        Object
 
     0x00000000   0x00000284   Code   RO            3  * RESET               startup.o
-    0x00000284   0x00000008   Code   RO          242  * !!!main             c_w.l(__main.o)
-    0x0000028c   0x00000002   Code   RO          269    .ARM.Collect$$libinit$$00000000  c_w.l(libinit.o)
-    0x0000028e   0x00000000   Code   RO          276    .ARM.Collect$$libinit$$00000002  c_w.l(libinit2.o)
-    0x0000028e   0x00000000   Code   RO          279    .ARM.Collect$$libinit$$00000008  c_w.l(libinit2.o)
-    0x0000028e   0x00000000   Code   RO          281    .ARM.Collect$$libinit$$0000000A  c_w.l(libinit2.o)
-    0x0000028e   0x00000000   Code   RO          283    .ARM.Collect$$libinit$$0000000C  c_w.l(libinit2.o)
-    0x0000028e   0x00000000   Code   RO          286    .ARM.Collect$$libinit$$0000000F  c_w.l(libinit2.o)
-    0x0000028e   0x00000000   Code   RO          288    .ARM.Collect$$libinit$$00000011  c_w.l(libinit2.o)
-    0x0000028e   0x00000000   Code   RO          290    .ARM.Collect$$libinit$$00000013  c_w.l(libinit2.o)
-    0x0000028e   0x00000000   Code   RO          292    .ARM.Collect$$libinit$$00000015  c_w.l(libinit2.o)
-    0x0000028e   0x00000000   Code   RO          294    .ARM.Collect$$libinit$$00000017  c_w.l(libinit2.o)
-    0x0000028e   0x00000000   Code   RO          296    .ARM.Collect$$libinit$$00000019  c_w.l(libinit2.o)
-    0x0000028e   0x00000000   Code   RO          298    .ARM.Collect$$libinit$$0000001B  c_w.l(libinit2.o)
-    0x0000028e   0x00000000   Code   RO          300    .ARM.Collect$$libinit$$0000001D  c_w.l(libinit2.o)
-    0x0000028e   0x00000000   Code   RO          302    .ARM.Collect$$libinit$$0000001F  c_w.l(libinit2.o)
-    0x0000028e   0x00000000   Code   RO          304    .ARM.Collect$$libinit$$00000021  c_w.l(libinit2.o)
-    0x0000028e   0x00000000   Code   RO          306    .ARM.Collect$$libinit$$00000023  c_w.l(libinit2.o)
-    0x0000028e   0x00000000   Code   RO          310    .ARM.Collect$$libinit$$0000002A  c_w.l(libinit2.o)
-    0x0000028e   0x00000000   Code   RO          312    .ARM.Collect$$libinit$$0000002C  c_w.l(libinit2.o)
-    0x0000028e   0x00000000   Code   RO          314    .ARM.Collect$$libinit$$0000002E  c_w.l(libinit2.o)
-    0x0000028e   0x00000000   Code   RO          316    .ARM.Collect$$libinit$$00000030  c_w.l(libinit2.o)
-    0x0000028e   0x00000002   Code   RO          317    .ARM.Collect$$libinit$$00000031  c_w.l(libinit2.o)
-    0x00000290   0x00000002   Code   RO          337    .ARM.Collect$$libshutdown$$00000000  c_w.l(libshutdown.o)
-    0x00000292   0x00000000   Code   RO          351    .ARM.Collect$$libshutdown$$00000003  c_w.l(libshutdown2.o)
-    0x00000292   0x00000000   Code   RO          354    .ARM.Collect$$libshutdown$$00000006  c_w.l(libshutdown2.o)
-    0x00000292   0x00000000   Code   RO          357    .ARM.Collect$$libshutdown$$00000009  c_w.l(libshutdown2.o)
-    0x00000292   0x00000000   Code   RO          359    .ARM.Collect$$libshutdown$$0000000B  c_w.l(libshutdown2.o)
-    0x00000292   0x00000000   Code   RO          362    .ARM.Collect$$libshutdown$$0000000E  c_w.l(libshutdown2.o)
-    0x00000292   0x00000002   Code   RO          363    .ARM.Collect$$libshutdown$$0000000F  c_w.l(libshutdown2.o)
-    0x00000294   0x00000000   Code   RO          244    .ARM.Collect$$rtentry$$00000000  c_w.l(rtentry.o)
-    0x00000294   0x00000000   Code   RO          246    .ARM.Collect$$rtentry$$00000002  c_w.l(rtentry2.o)
-    0x00000294   0x00000006   Code   RO          258    .ARM.Collect$$rtentry$$00000004  c_w.l(rtentry4.o)
-    0x0000029a   0x00000000   Code   RO          248    .ARM.Collect$$rtentry$$00000009  c_w.l(rtentry2.o)
-    0x0000029a   0x00000004   Code   RO          249    .ARM.Collect$$rtentry$$0000000A  c_w.l(rtentry2.o)
-    0x0000029e   0x00000000   Code   RO          251    .ARM.Collect$$rtentry$$0000000C  c_w.l(rtentry2.o)
-    0x0000029e   0x00000008   Code   RO          252    .ARM.Collect$$rtentry$$0000000D  c_w.l(rtentry2.o)
-    0x000002a6   0x00000002   Code   RO          273    .ARM.Collect$$rtexit$$00000000  c_w.l(rtexit.o)
-    0x000002a8   0x00000000   Code   RO          319    .ARM.Collect$$rtexit$$00000002  c_w.l(rtexit2.o)
-    0x000002a8   0x00000004   Code   RO          320    .ARM.Collect$$rtexit$$00000003  c_w.l(rtexit2.o)
-    0x000002ac   0x00000006   Code   RO          321    .ARM.Collect$$rtexit$$00000004  c_w.l(rtexit2.o)
+    0x00000284   0x00000008   Code   RO          472  * !!!main             c_w.l(__main.o)
+    0x0000028c   0x00000002   Code   RO          499    .ARM.Collect$$libinit$$00000000  c_w.l(libinit.o)
+    0x0000028e   0x00000000   Code   RO          506    .ARM.Collect$$libinit$$00000002  c_w.l(libinit2.o)
+    0x0000028e   0x00000000   Code   RO          509    .ARM.Collect$$libinit$$00000008  c_w.l(libinit2.o)
+    0x0000028e   0x00000000   Code   RO          511    .ARM.Collect$$libinit$$0000000A  c_w.l(libinit2.o)
+    0x0000028e   0x00000000   Code   RO          513    .ARM.Collect$$libinit$$0000000C  c_w.l(libinit2.o)
+    0x0000028e   0x00000000   Code   RO          516    .ARM.Collect$$libinit$$0000000F  c_w.l(libinit2.o)
+    0x0000028e   0x00000000   Code   RO          518    .ARM.Collect$$libinit$$00000011  c_w.l(libinit2.o)
+    0x0000028e   0x00000000   Code   RO          520    .ARM.Collect$$libinit$$00000013  c_w.l(libinit2.o)
+    0x0000028e   0x00000000   Code   RO          522    .ARM.Collect$$libinit$$00000015  c_w.l(libinit2.o)
+    0x0000028e   0x00000000   Code   RO          524    .ARM.Collect$$libinit$$00000017  c_w.l(libinit2.o)
+    0x0000028e   0x00000000   Code   RO          526    .ARM.Collect$$libinit$$00000019  c_w.l(libinit2.o)
+    0x0000028e   0x00000000   Code   RO          528    .ARM.Collect$$libinit$$0000001B  c_w.l(libinit2.o)
+    0x0000028e   0x00000000   Code   RO          530    .ARM.Collect$$libinit$$0000001D  c_w.l(libinit2.o)
+    0x0000028e   0x00000000   Code   RO          532    .ARM.Collect$$libinit$$0000001F  c_w.l(libinit2.o)
+    0x0000028e   0x00000000   Code   RO          534    .ARM.Collect$$libinit$$00000021  c_w.l(libinit2.o)
+    0x0000028e   0x00000000   Code   RO          536    .ARM.Collect$$libinit$$00000023  c_w.l(libinit2.o)
+    0x0000028e   0x00000000   Code   RO          540    .ARM.Collect$$libinit$$0000002A  c_w.l(libinit2.o)
+    0x0000028e   0x00000000   Code   RO          542    .ARM.Collect$$libinit$$0000002C  c_w.l(libinit2.o)
+    0x0000028e   0x00000000   Code   RO          544    .ARM.Collect$$libinit$$0000002E  c_w.l(libinit2.o)
+    0x0000028e   0x00000000   Code   RO          546    .ARM.Collect$$libinit$$00000030  c_w.l(libinit2.o)
+    0x0000028e   0x00000002   Code   RO          547    .ARM.Collect$$libinit$$00000031  c_w.l(libinit2.o)
+    0x00000290   0x00000002   Code   RO          567    .ARM.Collect$$libshutdown$$00000000  c_w.l(libshutdown.o)
+    0x00000292   0x00000000   Code   RO          581    .ARM.Collect$$libshutdown$$00000003  c_w.l(libshutdown2.o)
+    0x00000292   0x00000000   Code   RO          584    .ARM.Collect$$libshutdown$$00000006  c_w.l(libshutdown2.o)
+    0x00000292   0x00000000   Code   RO          587    .ARM.Collect$$libshutdown$$00000009  c_w.l(libshutdown2.o)
+    0x00000292   0x00000000   Code   RO          589    .ARM.Collect$$libshutdown$$0000000B  c_w.l(libshutdown2.o)
+    0x00000292   0x00000000   Code   RO          592    .ARM.Collect$$libshutdown$$0000000E  c_w.l(libshutdown2.o)
+    0x00000292   0x00000002   Code   RO          593    .ARM.Collect$$libshutdown$$0000000F  c_w.l(libshutdown2.o)
+    0x00000294   0x00000000   Code   RO          474    .ARM.Collect$$rtentry$$00000000  c_w.l(rtentry.o)
+    0x00000294   0x00000000   Code   RO          476    .ARM.Collect$$rtentry$$00000002  c_w.l(rtentry2.o)
+    0x00000294   0x00000006   Code   RO          488    .ARM.Collect$$rtentry$$00000004  c_w.l(rtentry4.o)
+    0x0000029a   0x00000000   Code   RO          478    .ARM.Collect$$rtentry$$00000009  c_w.l(rtentry2.o)
+    0x0000029a   0x00000004   Code   RO          479    .ARM.Collect$$rtentry$$0000000A  c_w.l(rtentry2.o)
+    0x0000029e   0x00000000   Code   RO          481    .ARM.Collect$$rtentry$$0000000C  c_w.l(rtentry2.o)
+    0x0000029e   0x00000008   Code   RO          482    .ARM.Collect$$rtentry$$0000000D  c_w.l(rtentry2.o)
+    0x000002a6   0x00000002   Code   RO          503    .ARM.Collect$$rtexit$$00000000  c_w.l(rtexit.o)
+    0x000002a8   0x00000000   Code   RO          549    .ARM.Collect$$rtexit$$00000002  c_w.l(rtexit2.o)
+    0x000002a8   0x00000004   Code   RO          550    .ARM.Collect$$rtexit$$00000003  c_w.l(rtexit2.o)
+    0x000002ac   0x00000006   Code   RO          551    .ARM.Collect$$rtexit$$00000004  c_w.l(rtexit2.o)
     0x000002b2   0x00000002   PAD
     0x000002b4   0x00000030   Code   RO            4    .text               startup.o
-    0x000002e4   0x00000006   Code   RO          240    .text               c_w.l(heapauxi.o)
-    0x000002ea   0x0000004a   Code   RO          260    .text               c_w.l(sys_stackheap_outer.o)
-    0x00000334   0x0000000c   Code   RO          262    .text               c_w.l(exit.o)
-    0x00000340   0x00000008   Code   RO          270    .text               c_w.l(libspace.o)
-    0x00000348   0x0000000c   Code   RO          329    .text               c_w.l(sys_exit.o)
-    0x00000354   0x00000002   Code   RO          340    .text               c_w.l(use_no_semi.o)
-    0x00000356   0x00000000   Code   RO          342    .text               c_w.l(indicate_semi.o)
-    0x00000356   0x00000002   PAD
-    0x00000358   0x0000000c   Code   RO          118    i.ADC1_In           texas.o
-    0x00000364   0x00000020   Code   RO          128    i.Timer4A_Handler   texas.o
-    0x00000384   0x00000030   Code   RO          129    i.Timer5A_Handler   texas.o
-    0x000003b4   0x000000d0   Code   RO           91    i.main              connectfourmain.o
-    0x00000484   0x00000000   Data   RO          394    Region$$Table       anon$$obj.o
+    0x000002e4   0x0000004e   Code   RO          468    .text               c_w.l(rt_memclr_w.o)
+    0x00000332   0x00000006   Code   RO          470    .text               c_w.l(heapauxi.o)
+    0x00000338   0x0000004a   Code   RO          490    .text               c_w.l(sys_stackheap_outer.o)
+    0x00000382   0x0000000c   Code   RO          492    .text               c_w.l(exit.o)
+    0x0000038e   0x00000002   PAD
+    0x00000390   0x00000008   Code   RO          500    .text               c_w.l(libspace.o)
+    0x00000398   0x0000000c   Code   RO          559    .text               c_w.l(sys_exit.o)
+    0x000003a4   0x00000002   Code   RO          570    .text               c_w.l(use_no_semi.o)
+    0x000003a6   0x00000000   Code   RO          572    .text               c_w.l(indicate_semi.o)
+    0x000003a6   0x00000002   PAD
+    0x000003a8   0x0000000c   Code   RO          157    i.ADC1_In           texas.o
+    0x000003b4   0x00000024   Code   RO          319    i.Delay100ms        userinterface.o
+    0x000003d8   0x00000074   Code   RO          320    i.MSScene           userinterface.o
+    0x0000044c   0x00000020   Code   RO           12    i.Nokia5110_Clear   nokia5110.o
+    0x0000046c   0x00000018   Code   RO           13    i.Nokia5110_ClearBuffer  nokia5110.o
+    0x00000484   0x00000010   Code   RO           14    i.Nokia5110_DisplayBuffer  nokia5110.o
+    0x00000494   0x00000022   Code   RO           15    i.Nokia5110_DrawFullImage  nokia5110.o
+    0x000004b6   0x00000002   PAD
+    0x000004b8   0x00000038   Code   RO           17    i.Nokia5110_OutChar  nokia5110.o
+    0x000004f0   0x00000016   Code   RO           18    i.Nokia5110_OutString  nokia5110.o
+    0x00000506   0x00000002   PAD
+    0x00000508   0x000001a8   Code   RO           20    i.Nokia5110_PrintBMP  nokia5110.o
+    0x000006b0   0x00000030   Code   RO           21    i.Nokia5110_SetCursor  nokia5110.o
+    0x000006e0   0x00000020   Code   RO          167    i.Timer4A_Handler   texas.o
+    0x00000700   0x00000030   Code   RO          168    i.Timer5A_Handler   texas.o
+    0x00000730   0x00000098   Code   RO          295    i.UARTInit          uarthandler.o
+    0x000007c8   0x0000003c   Code   RO           91    i.addSeed           connectfourmain.o
+    0x00000804   0x0000008c   Code   RO          401    i.bestMoveP1        connectfour.o
+    0x00000890   0x00000088   Code   RO          402    i.bestMoveP2        connectfour.o
+    0x00000918   0x0000001a   Code   RO          403    i.bestPosition      connectfour.o
+    0x00000932   0x00000002   PAD
+    0x00000934   0x0000003c   Code   RO          322    i.connectingScene   userinterface.o
+    0x00000970   0x00000044   Code   RO          323    i.displaySlaveSeed  userinterface.o
+    0x000009b4   0x00000078   Code   RO          324    i.drawEmptyGrid     userinterface.o
+    0x00000a2c   0x00000098   Code   RO          325    i.drawSeed          userinterface.o
+    0x00000ac4   0x0000020c   Code   RO          404    i.evaluate          connectfour.o
+    0x00000cd0   0x00000058   Code   RO          276    i.getInputKey       inputhandler.o
+    0x00000d28   0x0000003c   Code   RO           93    i.initialize        connectfourmain.o
+    0x00000d64   0x00000020   Code   RO          405    i.isMovesLeft       connectfour.o
+    0x00000d84   0x00000088   Code   RO          277    i.keyPadInit        inputhandler.o
+    0x00000e0c   0x0000004c   Code   RO           22    i.lcdwrite          nokia5110.o
+    0x00000e58   0x000003a4   Code   RO           94    i.main              connectfourmain.o
+    0x000011fc   0x0000000e   Code   RO          406    i.max               connectfour.o
+    0x0000120a   0x0000000e   Code   RO          407    i.min               connectfour.o
+    0x00001218   0x0000015c   Code   RO          408    i.minimax           connectfour.o
+    0x00001374   0x00000018   Code   RO          296    i.receive           uarthandler.o
+    0x0000138c   0x00000060   Code   RO          326    i.selectModeScene   userinterface.o
+    0x000013ec   0x00000088   Code   RO          327    i.selectSeedScene   userinterface.o
+    0x00001474   0x00000018   Code   RO          297    i.send              uarthandler.o
+    0x0000148c   0x00000034   Code   RO           95    i.sendAndWaitConfirmation  connectfourmain.o
+    0x000014c0   0x00000080   Code   RO          328    i.stateScene        userinterface.o
+    0x00001540   0x00000028   Code   RO           96    i.validColumn       connectfourmain.o
+    0x00001568   0x00000020   Code   RO          330    i.welcomeScene      userinterface.o
+    0x00001588   0x000001e0   Data   RO           24    .constdata          nokia5110.o
+    0x00001768   0x00000010   Data   RO          278    .constdata          inputhandler.o
+    0x00001778   0x00000820   Data   RO          331    .constdata          userinterface.o
+    0x00001f98   0x00000000   Data   RO          624    Region$$Table       anon$$obj.o
 
 
-    Execution Region ER_RW (Base: 0x20000000, Size: 0x00000044, Max: 0xffffffff, ABSOLUTE)
+    Execution Region ER_RW (Base: 0x20000000, Size: 0x00000070, Max: 0xffffffff, ABSOLUTE)
 
     Base Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x20000000   0x0000000f   Data   RW           94    .data               connectfourmain.o
-    0x2000000f   0x00000001   PAD
-    0x20000010   0x00000034   Data   RW          138    .data               texas.o
+    0x20000000   0x00000011   Data   RW           99    .data               connectfourmain.o
+    0x20000011   0x00000003   PAD
+    0x20000014   0x00000034   Data   RW          177    .data               texas.o
+    0x20000048   0x00000020   Data   RW          332    .data               userinterface.o
+    0x20000068   0x00000008   Data   RW          410    .data               connectfour.o
 
 
-    Execution Region ER_ZI (Base: 0x20000044, Size: 0x000004ac, Max: 0xffffffff, ABSOLUTE)
+    Execution Region ER_ZI (Base: 0x20000070, Size: 0x000006c0, Max: 0xffffffff, ABSOLUTE)
 
     Base Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x20000044   0x00000048   Zero   RW           92    .bss                connectfourmain.o
-    0x2000008c   0x00000060   Zero   RW          271    .bss                c_w.l(libspace.o)
-    0x200000ec   0x00000004   PAD
-    0x200000f0   0x00000000   Zero   RW            2    HEAP                startup.o
-    0x200000f0   0x00000400   Zero   RW            1    STACK               startup.o
+    0x20000070   0x000001f8   Zero   RW           23    .bss                nokia5110.o
+    0x20000268   0x00000048   Zero   RW           97    .bss                connectfourmain.o
+    0x200002b0   0x0000001c   Zero   RW          409    .bss                connectfour.o
+    0x200002cc   0x00000060   Zero   RW          501    .bss                c_w.l(libspace.o)
+    0x2000032c   0x00000004   PAD
+    0x20000330   0x00000000   Zero   RW            2    HEAP                startup.o
+    0x20000330   0x00000400   Zero   RW            1    STACK               startup.o
 

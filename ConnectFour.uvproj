@@ -425,6 +425,26 @@
               <FileType>1</FileType>
               <FilePath>.\TExaS.c</FilePath>
             </File>
+            <File>
+              <FileName>InputHandler.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\InputHandler.c</FilePath>
+            </File>
+            <File>
+              <FileName>UARTHandler.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\UARTHandler.c</FilePath>
+            </File>
+            <File>
+              <FileName>UserInterface.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\UserInterface.c</FilePath>
+            </File>
+            <File>
+              <FileName>ConnectFour.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\ConnectFour.c</FilePath>
+            </File>
           </Files>
         </Group>
       </Groups>

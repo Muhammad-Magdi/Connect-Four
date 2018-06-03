@@ -8,82 +8,61 @@ Project File Date:  05/31/2018
 
 <h2>Output:</h2>
 Build target 'ConncetFour'
-compiling ConnectFourMain.c...
-TExaS.h(34): error:  #101: "DisplayType" has already been declared in the current scope
-  enum DisplayType{
-TExaS.h(35): error:  #101: "UART0_Emulate_Nokia5110_NoScope" has already been declared in the current scope
-    UART0_Emulate_Nokia5110_NoScope,
-TExaS.h(36): error:  #101: "SSI0_Real_Nokia5110_Scope" has already been declared in the current scope
-    SSI0_Real_Nokia5110_Scope,
-TExaS.h(37): error:  #101: "SSI0_Real_Nokia5110_NoScope" has already been declared in the current scope
-    SSI0_Real_Nokia5110_NoScope,
-TExaS.h(38): error:  #101: "NoLCD_NoScope" has already been declared in the current scope
-    NoLCD_NoScope
-TExaS.h(47): error:  #147-D: declaration is incompatible with "void TExaS_Init(enum DisplayType)" (declared at line 47)
-  void TExaS_Init(enum DisplayType display);
-ConnectFour.h(42): error:  #20: identifier "GameState" is undefined
-  void stateScene(GameState gameState);
-ConnectFour.h(48): warning:  #1-D: last line of file ends without a newline
-  void Delay100ms(unsigned long count); 
-TExaS.h(34): error:  #101: "DisplayType" has already been declared in the current scope
-  enum DisplayType{
-TExaS.h(35): error:  #101: "UART0_Emulate_Nokia5110_NoScope" has already been declared in the current scope
-    UART0_Emulate_Nokia5110_NoScope,
-TExaS.h(36): error:  #101: "SSI0_Real_Nokia5110_Scope" has already been declared in the current scope
-    SSI0_Real_Nokia5110_Scope,
-TExaS.h(37): error:  #101: "SSI0_Real_Nokia5110_NoScope" has already been declared in the current scope
-    SSI0_Real_Nokia5110_NoScope,
-TExaS.h(38): error:  #101: "NoLCD_NoScope" has already been declared in the current scope
-    NoLCD_NoScope
-TExaS.h(47): error:  #147-D: declaration is incompatible with "void TExaS_Init(enum DisplayType)" (declared at line 47)
-  void TExaS_Init(enum DisplayType display);
-Nokia5110.h(71): error:  #148: variable "ASCII" has already been initialized
-  static const char ASCII[][5] = {
-ConnectFour.h(42): error:  #20: identifier "GameState" is undefined
-  void stateScene(GameState gameState);
-ConnectFour.h(48): warning:  #1-D: last line of file ends without a newline
-  void Delay100ms(unsigned long count); 
-TExaS.h(34): error:  #101: "DisplayType" has already been declared in the current scope
-  enum DisplayType{
-TExaS.h(35): error:  #101: "UART0_Emulate_Nokia5110_NoScope" has already been declared in the current scope
-    UART0_Emulate_Nokia5110_NoScope,
-TExaS.h(36): error:  #101: "SSI0_Real_Nokia5110_Scope" has already been declared in the current scope
-    SSI0_Real_Nokia5110_Scope,
-TExaS.h(37): error:  #101: "SSI0_Real_Nokia5110_NoScope" has already been declared in the current scope
-    SSI0_Real_Nokia5110_NoScope,
-TExaS.h(38): error:  #101: "NoLCD_NoScope" has already been declared in the current scope
-    NoLCD_NoScope
-TExaS.h(47): error:  #147-D: declaration is incompatible with "void TExaS_Init(enum DisplayType)" (declared at line 47)
-  void TExaS_Init(enum DisplayType display);
-Nokia5110.h(71): error:  #148: variable "ASCII" has already been initialized
-  static const char ASCII[][5] = {
-UserInterface.h(40): error:  #20: identifier "GameState" is undefined
-  void StateScene(GameState gameState);
-UserInterface.h(43): error:  #147-D: declaration is incompatible with "void displaySlaveSeed(unsigned short)" (declared at line 45 of "ConnectFour.h")
-  void displaySlaveSeed (int turn) ;
-ConnectFourMain.c(9): error:  #20: identifier "ROWS" is undefined
-  char gameGrid[ROWS][COLS];
-ConnectFourMain.c(9): error:  #20: identifier "COLS" is undefined
-  char gameGrid[ROWS][COLS];
-ConnectFourMain.c(12): error:  #20: identifier "GameState" is undefined
-  GameState currentState;
-ConnectFourMain.c(29): error:  #20: identifier "RUNNING" is undefined
-                        while(currentState == RUNNING){
-ConnectFourMain.c(34): warning:  #223-D: function "bestPosition" declared implicitly
-                                        nextColumn = bestPosition(gameGrid, currentTurn);
-ConnectFourMain.c(38): warning:  #223-D: function "checkGameState" declared implicitly
-                                currentState = checkGameState(gameGrid);
-ConnectFourMain.c(41): warning:  #223-D: function "isMaster" declared implicitly
-                        if(isMaster()){
-ConnectFourMain.c(48): error:  #20: identifier "RUNNING" is undefined
-                                while(currentState == RUNNING){
-ConnectFourMain.c(58): warning:  #223-D: function "checkGameState" declared implicitly
-                                        currentState = checkGameState(gameGrid);
-ConnectFourMain.c(76): error:  #20: identifier "RUNNING" is undefined
-        currentState = RUNNING;
-ConnectFourMain.c: 6 warnings, 30 errors
-".\ConnectFour.axf" - 30 Error(s), 6 Warning(s).
+compiling ConnectFour.c...
+ConnectFour.c(30): error:  #147: declaration is incompatible with "GameState checkGameState(char (*)[7])" (declared at line 12 of "ConnectFour.h")
+  int checkGameState(char board[ROWS][COLS]){
+ConnectFour.c(145): warning:  #1-D: last line of file ends without a newline
+  }
+ConnectFour.c: 1 warning, 1 error
+".\ConnectFour.axf" - 1 Error(s), 1 Warning(s).
 Target not created
 </pre>
 </body>
 </html>
+
+  }
+ConnectFour.c: 1 warning, 2 errors
+".\ConnectFour.axf" - 2 Error(s), 1 Warning(s).
+Target not created
+Warning(s).
+Target not created
+ction call
+        if(seed == 'X') return bestMoveP1(grid);
+ConnectFour.c(145): warning:  #1-D: last line of file ends without a newline
+  }
+ConnectFour.c: 2 warnings, 4 errors
+".\ConnectFour.axf" - 4 Error(s), 2 Warning(s).
+Target not created
+        board = grid;
+ConnectFour.c(146): warning:  #1-D: last line of file ends without a newline
+  }
+ConnectFour.c: 7 warnings, 2 errors
+".\ConnectFour.axf" - 2 Error(s), 7 Warning(s).
+Target not created
+ -INF, INF);
+ConnectFour.c(140): error:  #137: expression must be a modifiable lvalue
+        board = grid;
+ConnectFour.c(143): warning:  #1-D: last line of file ends without a newline
+  }
+ConnectFour.c: 1 warning, 11 errors
+".\ConnectFour.axf" - 11 Error(s), 1 Warning(s).
+Target not created
+xecutable statement in block
+        int moveVal = minimax(0, 1, -INF, INF);
+ConnectFour.c(139): error:  #137: expression must be a modifiable lvalue
+        board = grid;
+ConnectFour.c(142): warning:  #1-D: last line of file ends without a newline
+  }
+ConnectFour.c: 1 warning, 15 errors
+".\ConnectFour.axf" - 15 Error(s), 1 Warning(s).
+Target not created
+ur.c(141): warning:  #1-D: last line of file ends without a newline
+  }
+ConnectFour.c: 1 warning, 17 errors
+".\ConnectFour.axf" - 17 Error(s), 1 Warning(s).
+Target not created
+ol welcomeScene (referred from connectfourmain.o).
+Not enough information to list image symbols.
+Finished: 1 information, 0 warning and 17 error messages.
+".\ConnectFour.axf" - 17 Error(s), 2 Warning(s).
+Target not created

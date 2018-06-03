@@ -1,3 +1,6 @@
+#ifndef USER_INTERFACE_H
+#define USER_INTERFACE_H
+
 #include "ConnectFour.h"
 
 //************************display functions**********************
@@ -44,3 +47,5 @@ void displaySlaveSeed (unsigned short turn) ;
 
 // time delay in 0.1 seconds
 void Delay100ms(unsigned long count); 
+
+#endif
