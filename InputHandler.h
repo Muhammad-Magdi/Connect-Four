@@ -9,4 +9,5 @@ void keyPadInit(void);
 
 unsigned char getInputKey(void);
 
+void delayUs(int);
 #endif

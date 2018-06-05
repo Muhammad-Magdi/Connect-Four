@@ -16,6 +16,9 @@ GameState state;
 void sendAndWaitConfirmation(unsigned char);
 int validColumn(unsigned char);
 char readValidKey(void);
+void finalStateDisplay(void);
+void toggleTurn(void);
+void runSingleMode(void);
 
 int main(void){
 	
@@ -23,11 +26,12 @@ int main(void){
 	keyPadInit();
 	NokiaInit();
 	portFInit();
+	
 	while(1){
 		initializeBoard();
 		welcomeScene();
-		Delay100ms(3);
-		state =RUNNING;
+		Delay100ms(10);
+		state = RUNNING;
 		turn = 'X' ;
 		
 		mode = selectModeScene();
@@ -35,31 +39,18 @@ int main(void){
 			Delay100ms(3);
 			playerSeed = selectSeedScene();
 			drawEmptyGrid();
-			while(state == RUNNING){
-				if(turn == playerSeed){
-					nextColumn = readValidKey();
-					if(nextColumn == '#')		nextColumn = bestPosition(turn);
-					else nextColumn -= 0x30;		//char to int
-					drawSeed(turn, nextColumn, heightOf(nextColumn));
-					addSeed(turn, nextColumn);
-				}else{
-					nextColumn = bestPosition(turn);
-					drawSeed(turn, nextColumn, heightOf(nextColumn));
-					addSeed(turn, nextColumn);
-				}
-				turn = (turn == 'X' ? 'O' : 'X');		//Toggle Turn
-				state = checkGameState();
-			}
-			Delay100ms(20);			//Two Seconds before printing final state
-			stateScene(state, playerSeed);
-			Delay100ms(20);			//Two Seconds after printing final state			
+			runSingleMode();
+			finalStateDisplay();
 		}else{							//Multi.
+			Delay100ms(20);
 			if(MSScene() == 1){
 				//HandShake as a master
 				connectingScene();
 				sendAndWaitConfirmation(17);
+				setRedLed();
 				//Choose a seed and tell the slave
 				playerSeed = selectSeedScene();
+				clearRedLed();
 				sendAndWaitConfirmation(playerSeed == 'X' ? 31 : 32);
 				drawEmptyGrid();
 				while(state == RUNNING){
@@ -94,36 +85,39 @@ int main(void){
 							default : sendAndWaitConfirmation(23);
 						}
 					}
-					turn = (turn == 'X' ? 'O' : 'X');		//Toggle Turn
+					toggleTurn();
 					state = checkGameState();
 				}
-				Delay100ms(20);			//Two Seconds before printing final state
-				stateScene(state, playerSeed);
-				Delay100ms(20);			//Two Seconds after printing final state		
+				finalStateDisplay();
 			}else{
 				connectingScene();
 				do{
 					tmpChar = receive();
+					toggleRedLed();
 				}while(tmpChar != 17);			//Wait to find a master
 				send(200);									//Confirm
+				setGreenLed();
 				tmpChar = receive();				//Masters Seed
 				send(200);									//Confirm
+				setBlueLed();
 				playerSeed = (tmpChar == 31 ?  'O' : 'X');
 				tmpChar = (tmpChar == 31 ? 2:1);
 				displaySlaveSeed(tmpChar);
 				Delay100ms(3);
+				
 				drawEmptyGrid();
 				while(state == RUNNING){
 					if(turn == playerSeed){
 						do {
-							nextColumn = readValidKey() - 0x30;
+							nextColumn = readValidKey();
+							if(nextColumn == '#')	nextColumn = bestPosition(turn);
+							else nextColumn -= 0x30;
 							send (nextColumn);
 							tmpChar = receive();
 						}while(tmpChar==24);		//While it's invalid
 						//nextColumn = '#';
 						drawSeed(turn, nextColumn, heightOf(nextColumn));
 						addSeed(turn, nextColumn);
-						
 						if (tmpChar == 22 && playerSeed =='X') state =P1WIN ;
 						else if (tmpChar ==22 &&playerSeed =='O') state =P2WIN ;
 						else if (tmpChar ==23) state =TIE;
@@ -137,30 +131,33 @@ int main(void){
 						tmpChar = receive();
 						if (tmpChar == 21 && playerSeed =='X') state =P2WIN ;
 						else if (tmpChar ==21 && playerSeed =='O') state =P1WIN ;
-						else if (tmpChar ==23) state =TIE;
+						else if (tmpChar ==23) state = TIE;
 						send(200);
 					}
-					turn = (turn == 'X' ? 'O' : 'X');		//Toggle Turn
+					toggleTurn();
 				}
-				Delay100ms(20);			//Two Seconds before printing final state
-				stateScene(state, playerSeed);
-				Delay100ms(20);			//Two Seconds after printing final state		
+				finalStateDisplay();
 			}
 		}
 	}
 }
 
+void toggleTurn(void){
+	turn = (turn == 'X' ? 'O' : 'X');		//Toggle Turn
+	Delay100ms(5);
+}
+
 void sendAndWaitConfirmation(unsigned char c){
-	int firstTime = 1;
 	do{
 		send(c);
-		if(!firstTime)	Delay100ms(10);
-		firstTime = 0;
+		Delay100ms(10);
+		toggleBlueLed();
 	}while(receive()!=200);
+	setGreenLed();
 }
 
 int validColumn(unsigned char col){
-	return (col == '#' || (col >= 0x30 && col <= (unsigned char)0x30+COLS && heightOf(col-0x30-1) < ROWS));
+	return (col == '#' || (col >= 0x30 && col < (0x30+COLS) && heightOf(col-0x30) < ROWS));
 }
 
 char readValidKey(void){
@@ -169,4 +166,33 @@ char readValidKey(void){
 		nextColumn = getInputKey();
 	}while(!validColumn(nextColumn));
 	return nextColumn;
+}
+
+void finalStateDisplay(void){
+	if(state == P1WIN || state == P2WIN){
+		genPoint();
+		winGrid();
+	//	winScene();
+	}
+	Delay100ms(50);			//Five Seconds before printing final state
+	stateScene(state, playerSeed);
+	Delay100ms(20);			//Two Seconds after printing final state		
+}
+
+void runSingleMode(void){
+	while(state == RUNNING){
+			if(turn == playerSeed){
+				nextColumn = readValidKey();
+				if(nextColumn == '#')		nextColumn = bestPosition(turn);
+				else nextColumn -= 0x30;		//char to int
+				drawSeed(turn, nextColumn, heightOf(nextColumn));
+				addSeed(turn, nextColumn);
+			}else{
+				nextColumn = bestPosition(turn);
+				drawSeed(turn, nextColumn, heightOf(nextColumn));
+				addSeed(turn, nextColumn);
+			}
+			toggleTurn();
+			state = checkGameState();
+		}
 }

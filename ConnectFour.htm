@@ -3,21 +3,21 @@
 <title>Static Call Graph - [.\ConnectFour.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\ConnectFour.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5.03 [Build 76]: Last Updated: Mon Jun 04 15:37:51 2018
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5.03 [Build 76]: Last Updated: Tue Jun 05 18:12:59 2018
 <BR><P>
-<H3>Maximum Stack Usage =         72 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
+<H3>Maximum Stack Usage =         88 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
-__rt_entry_main &rArr; main &rArr; bestPosition &rArr; bestMoveP2 &rArr; minimax &rArr;  minimax (Cycle)
+__rt_entry_main &rArr; main &rArr; finalStateDisplay &rArr; winGrid &rArr; drawInvertedSeed &rArr; Nokia5110_DisplayBuffer &rArr; Nokia5110_DrawFullImage &rArr; Nokia5110_SetCursor
 <P>
 <H3>
 Functions with no stack information
 </H3><UL>
  <LI><a href="#[7f]">Reset_Handler</a>
- <LI><a href="#[e7]">DisableInterrupts</a>
- <LI><a href="#[e8]">EnableInterrupts</a>
- <LI><a href="#[e9]">StartCritical</a>
- <LI><a href="#[ea]">EndCritical</a>
- <LI><a href="#[eb]">WaitForInterrupt</a>
+ <LI><a href="#[f4]">DisableInterrupts</a>
+ <LI><a href="#[f5]">EnableInterrupts</a>
+ <LI><a href="#[f6]">StartCritical</a>
+ <LI><a href="#[f7]">EndCritical</a>
+ <LI><a href="#[f8]">WaitForInterrupt</a>
  <LI><a href="#[91]">__user_initial_stackheap</a>
 </UL>
 </UL>
@@ -591,9 +591,9 @@ Global Symbols
 <BR><BR>[Calls]<UL><LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_entry
 </UL>
 
-<P><STRONG><a name="[c6]"></a>__scatterload_rt2_thumb_only</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __scatter.o(!!!scatter), UNUSED)
+<P><STRONG><a name="[d3]"></a>__scatterload_rt2_thumb_only</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __scatter.o(!!!scatter), UNUSED)
 
-<P><STRONG><a name="[c7]"></a>__scatterload_null</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __scatter.o(!!!scatter), UNUSED)
+<P><STRONG><a name="[d4]"></a>__scatterload_null</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __scatter.o(!!!scatter), UNUSED)
 
 <P><STRONG><a name="[84]"></a>__scatterload_copy</STRONG> (Thumb, 26 bytes, Stack size unknown bytes, __scatter_copy.o(!!handler_copy), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload_copy
@@ -601,74 +601,74 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload_copy
 </UL>
 
-<P><STRONG><a name="[c8]"></a>__scatterload_zeroinit</STRONG> (Thumb, 28 bytes, Stack size unknown bytes, __scatter_zi.o(!!handler_zi), UNUSED)
+<P><STRONG><a name="[d5]"></a>__scatterload_zeroinit</STRONG> (Thumb, 28 bytes, Stack size unknown bytes, __scatter_zi.o(!!handler_zi), UNUSED)
 
 <P><STRONG><a name="[88]"></a>__rt_lib_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit.o(.ARM.Collect$$libinit$$00000000))
 <BR><BR>[Called By]<UL><LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_entry_li
 </UL>
 
-<P><STRONG><a name="[c9]"></a>__rt_lib_init_alloca_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000002C))
+<P><STRONG><a name="[d6]"></a>__rt_lib_init_alloca_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000002C))
 
-<P><STRONG><a name="[ca]"></a>__rt_lib_init_argv_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000002A))
+<P><STRONG><a name="[d7]"></a>__rt_lib_init_argv_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000002A))
 
-<P><STRONG><a name="[cb]"></a>__rt_lib_init_atexit_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000019))
+<P><STRONG><a name="[d8]"></a>__rt_lib_init_atexit_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000019))
 
-<P><STRONG><a name="[cc]"></a>__rt_lib_init_clock_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000001F))
+<P><STRONG><a name="[d9]"></a>__rt_lib_init_clock_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000001F))
 
-<P><STRONG><a name="[cd]"></a>__rt_lib_init_cpp_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000030))
+<P><STRONG><a name="[da]"></a>__rt_lib_init_cpp_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000030))
 
-<P><STRONG><a name="[ce]"></a>__rt_lib_init_exceptions_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000002E))
+<P><STRONG><a name="[db]"></a>__rt_lib_init_exceptions_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000002E))
 
-<P><STRONG><a name="[cf]"></a>__rt_lib_init_fp_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000002))
+<P><STRONG><a name="[dc]"></a>__rt_lib_init_fp_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000002))
 
-<P><STRONG><a name="[d0]"></a>__rt_lib_init_fp_trap_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000001D))
+<P><STRONG><a name="[dd]"></a>__rt_lib_init_fp_trap_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000001D))
 
-<P><STRONG><a name="[d1]"></a>__rt_lib_init_getenv_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000021))
+<P><STRONG><a name="[de]"></a>__rt_lib_init_getenv_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000021))
 
-<P><STRONG><a name="[d2]"></a>__rt_lib_init_heap_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000008))
+<P><STRONG><a name="[df]"></a>__rt_lib_init_heap_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000008))
 
-<P><STRONG><a name="[d3]"></a>__rt_lib_init_lc_collate_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000000F))
+<P><STRONG><a name="[e0]"></a>__rt_lib_init_lc_collate_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000000F))
 
-<P><STRONG><a name="[d4]"></a>__rt_lib_init_lc_ctype_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000011))
+<P><STRONG><a name="[e1]"></a>__rt_lib_init_lc_ctype_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000011))
 
-<P><STRONG><a name="[d5]"></a>__rt_lib_init_lc_monetary_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000013))
+<P><STRONG><a name="[e2]"></a>__rt_lib_init_lc_monetary_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000013))
 
-<P><STRONG><a name="[d6]"></a>__rt_lib_init_lc_numeric_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000015))
+<P><STRONG><a name="[e3]"></a>__rt_lib_init_lc_numeric_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000015))
 
-<P><STRONG><a name="[d7]"></a>__rt_lib_init_lc_time_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000017))
+<P><STRONG><a name="[e4]"></a>__rt_lib_init_lc_time_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000017))
 
-<P><STRONG><a name="[d8]"></a>__rt_lib_init_rand_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000000C))
+<P><STRONG><a name="[e5]"></a>__rt_lib_init_rand_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000000C))
 
-<P><STRONG><a name="[d9]"></a>__rt_lib_init_return</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000031))
+<P><STRONG><a name="[e6]"></a>__rt_lib_init_return</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000031))
 
-<P><STRONG><a name="[da]"></a>__rt_lib_init_signal_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000001B))
+<P><STRONG><a name="[e7]"></a>__rt_lib_init_signal_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000001B))
 
-<P><STRONG><a name="[db]"></a>__rt_lib_init_stdio_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000023))
+<P><STRONG><a name="[e8]"></a>__rt_lib_init_stdio_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000023))
 
-<P><STRONG><a name="[dc]"></a>__rt_lib_init_user_alloc_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000000A))
+<P><STRONG><a name="[e9]"></a>__rt_lib_init_user_alloc_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000000A))
 
 <P><STRONG><a name="[8d]"></a>__rt_lib_shutdown</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown.o(.ARM.Collect$$libshutdown$$00000000))
 <BR><BR>[Called By]<UL><LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_exit_ls
 </UL>
 
-<P><STRONG><a name="[dd]"></a>__rt_lib_shutdown_fp_trap_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$00000006))
+<P><STRONG><a name="[ea]"></a>__rt_lib_shutdown_fp_trap_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$00000006))
 
-<P><STRONG><a name="[de]"></a>__rt_lib_shutdown_heap_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$0000000E))
+<P><STRONG><a name="[eb]"></a>__rt_lib_shutdown_heap_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$0000000E))
 
-<P><STRONG><a name="[df]"></a>__rt_lib_shutdown_return</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$0000000F))
+<P><STRONG><a name="[ec]"></a>__rt_lib_shutdown_return</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$0000000F))
 
-<P><STRONG><a name="[e0]"></a>__rt_lib_shutdown_signal_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$00000009))
+<P><STRONG><a name="[ed]"></a>__rt_lib_shutdown_signal_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$00000009))
 
-<P><STRONG><a name="[e1]"></a>__rt_lib_shutdown_stdio_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$00000003))
+<P><STRONG><a name="[ee]"></a>__rt_lib_shutdown_stdio_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$00000003))
 
-<P><STRONG><a name="[e2]"></a>__rt_lib_shutdown_user_alloc_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$0000000B))
+<P><STRONG><a name="[ef]"></a>__rt_lib_shutdown_user_alloc_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$0000000B))
 
 <P><STRONG><a name="[82]"></a>__rt_entry</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, rtentry.o(.ARM.Collect$$rtentry$$00000000))
-<BR><BR>[Called By]<UL><LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__main
-<LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload_rt2
+<BR><BR>[Called By]<UL><LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload_rt2
+<LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__main
 </UL>
 
-<P><STRONG><a name="[e3]"></a>__rt_entry_presh_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, rtentry2.o(.ARM.Collect$$rtentry$$00000002))
+<P><STRONG><a name="[f0]"></a>__rt_entry_presh_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, rtentry2.o(.ARM.Collect$$rtentry$$00000002))
 
 <P><STRONG><a name="[85]"></a>__rt_entry_sh</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, rtentry4.o(.ARM.Collect$$rtentry$$00000004))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8 + Unknown Stack Size
@@ -681,17 +681,17 @@ Global Symbols
 <BR><BR>[Calls]<UL><LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_lib_init
 </UL>
 
-<P><STRONG><a name="[e4]"></a>__rt_entry_postsh_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, rtentry2.o(.ARM.Collect$$rtentry$$00000009))
+<P><STRONG><a name="[f1]"></a>__rt_entry_postsh_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, rtentry2.o(.ARM.Collect$$rtentry$$00000009))
 
 <P><STRONG><a name="[89]"></a>__rt_entry_main</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, rtentry2.o(.ARM.Collect$$rtentry$$0000000D))
-<BR><BR>[Stack]<UL><LI>Max Depth = 72 + Unknown Stack Size
-<LI>Call Chain = __rt_entry_main &rArr; main &rArr; bestPosition &rArr; bestMoveP2 &rArr; minimax &rArr;  minimax (Cycle)
+<BR><BR>[Stack]<UL><LI>Max Depth = 88 + Unknown Stack Size
+<LI>Call Chain = __rt_entry_main &rArr; main &rArr; finalStateDisplay &rArr; winGrid &rArr; drawInvertedSeed &rArr; Nokia5110_DisplayBuffer &rArr; Nokia5110_DrawFullImage &rArr; Nokia5110_SetCursor
 </UL>
 <BR>[Calls]<UL><LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 <LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;exit
 </UL>
 
-<P><STRONG><a name="[e5]"></a>__rt_entry_postli_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, rtentry2.o(.ARM.Collect$$rtentry$$0000000C))
+<P><STRONG><a name="[f2]"></a>__rt_entry_postli_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, rtentry2.o(.ARM.Collect$$rtentry$$0000000C))
 
 <P><STRONG><a name="[92]"></a>__rt_exit</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, rtexit.o(.ARM.Collect$$rtexit$$00000000))
 <BR><BR>[Called By]<UL><LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;exit
@@ -701,43 +701,43 @@ Global Symbols
 <BR><BR>[Calls]<UL><LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_lib_shutdown
 </UL>
 
-<P><STRONG><a name="[e6]"></a>__rt_exit_prels_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, rtexit2.o(.ARM.Collect$$rtexit$$00000002))
+<P><STRONG><a name="[f3]"></a>__rt_exit_prels_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, rtexit2.o(.ARM.Collect$$rtexit$$00000002))
 
 <P><STRONG><a name="[8e]"></a>__rt_exit_exit</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, rtexit2.o(.ARM.Collect$$rtexit$$00000004))
 <BR><BR>[Calls]<UL><LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_sys_exit
 </UL>
 
-<P><STRONG><a name="[e7]"></a>DisableInterrupts</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, startup.o(.text), UNUSED)
+<P><STRONG><a name="[f4]"></a>DisableInterrupts</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, startup.o(.text), UNUSED)
 
-<P><STRONG><a name="[e8]"></a>EnableInterrupts</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, startup.o(.text), UNUSED)
+<P><STRONG><a name="[f5]"></a>EnableInterrupts</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, startup.o(.text), UNUSED)
 
-<P><STRONG><a name="[e9]"></a>StartCritical</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, startup.o(.text), UNUSED)
+<P><STRONG><a name="[f6]"></a>StartCritical</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, startup.o(.text), UNUSED)
 
-<P><STRONG><a name="[ea]"></a>EndCritical</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, startup.o(.text), UNUSED)
+<P><STRONG><a name="[f7]"></a>EndCritical</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, startup.o(.text), UNUSED)
 
-<P><STRONG><a name="[eb]"></a>WaitForInterrupt</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, startup.o(.text), UNUSED)
+<P><STRONG><a name="[f8]"></a>WaitForInterrupt</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, startup.o(.text), UNUSED)
 
 <P><STRONG><a name="[91]"></a>__user_initial_stackheap</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, startup.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__user_setup_stackheap
 </UL>
 
-<P><STRONG><a name="[b6]"></a>__aeabi_memclr4</STRONG> (Thumb, 0 bytes, Stack size 4 bytes, rt_memclr_w.o(.text))
+<P><STRONG><a name="[bc]"></a>__aeabi_memclr4</STRONG> (Thumb, 0 bytes, Stack size 4 bytes, rt_memclr_w.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = __aeabi_memclr4
 </UL>
-<BR>[Called By]<UL><LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;initializeBoard
+<BR>[Called By]<UL><LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;initializeBoard
 </UL>
 
-<P><STRONG><a name="[ec]"></a>__aeabi_memclr8</STRONG> (Thumb, 0 bytes, Stack size 4 bytes, rt_memclr_w.o(.text), UNUSED)
+<P><STRONG><a name="[f9]"></a>__aeabi_memclr8</STRONG> (Thumb, 0 bytes, Stack size 4 bytes, rt_memclr_w.o(.text), UNUSED)
 
-<P><STRONG><a name="[ed]"></a>__rt_memclr_w</STRONG> (Thumb, 78 bytes, Stack size 4 bytes, rt_memclr_w.o(.text), UNUSED)
+<P><STRONG><a name="[fa]"></a>__rt_memclr_w</STRONG> (Thumb, 78 bytes, Stack size 4 bytes, rt_memclr_w.o(.text), UNUSED)
 
-<P><STRONG><a name="[ee]"></a>_memset_w</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, rt_memclr_w.o(.text), UNUSED)
+<P><STRONG><a name="[fb]"></a>_memset_w</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, rt_memclr_w.o(.text), UNUSED)
 
-<P><STRONG><a name="[ef]"></a>__use_two_region_memory</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, heapauxi.o(.text), UNUSED)
+<P><STRONG><a name="[fc]"></a>__use_two_region_memory</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, heapauxi.o(.text), UNUSED)
 
-<P><STRONG><a name="[f0]"></a>__rt_heap_escrow$2region</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, heapauxi.o(.text), UNUSED)
+<P><STRONG><a name="[fd]"></a>__rt_heap_escrow$2region</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, heapauxi.o(.text), UNUSED)
 
-<P><STRONG><a name="[f1]"></a>__rt_heap_expand$2region</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, heapauxi.o(.text), UNUSED)
+<P><STRONG><a name="[fe]"></a>__rt_heap_expand$2region</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, heapauxi.o(.text), UNUSED)
 
 <P><STRONG><a name="[86]"></a>__user_setup_stackheap</STRONG> (Thumb, 74 bytes, Stack size 8 bytes, sys_stackheap_outer.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8 + Unknown Stack Size
@@ -755,23 +755,23 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_entry_main
 </UL>
 
-<P><STRONG><a name="[f2]"></a>__user_libspace</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, libspace.o(.text), UNUSED)
+<P><STRONG><a name="[ff]"></a>__user_libspace</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, libspace.o(.text), UNUSED)
 
 <P><STRONG><a name="[90]"></a>__user_perproc_libspace</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, libspace.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__user_setup_stackheap
 </UL>
 
-<P><STRONG><a name="[f3]"></a>__user_perthread_libspace</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, libspace.o(.text), UNUSED)
+<P><STRONG><a name="[100]"></a>__user_perthread_libspace</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, libspace.o(.text), UNUSED)
 
 <P><STRONG><a name="[8f]"></a>_sys_exit</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, sys_exit.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_exit_exit
 </UL>
 
-<P><STRONG><a name="[f4]"></a>__I$use$semihosting</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, use_no_semi.o(.text), UNUSED)
+<P><STRONG><a name="[101]"></a>__I$use$semihosting</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, use_no_semi.o(.text), UNUSED)
 
-<P><STRONG><a name="[f5]"></a>__use_no_semihosting_swi</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, use_no_semi.o(.text), UNUSED)
+<P><STRONG><a name="[102]"></a>__use_no_semihosting_swi</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, use_no_semi.o(.text), UNUSED)
 
-<P><STRONG><a name="[f6]"></a>__semihosting_library_function</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, indicate_semi.o(.text), UNUSED)
+<P><STRONG><a name="[103]"></a>__semihosting_library_function</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, indicate_semi.o(.text), UNUSED)
 
 <P><STRONG><a name="[a4]"></a>ADC1_In</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, texas.o(i.ADC1_In))
 <BR><BR>[Called By]<UL><LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Timer5A_Handler
@@ -787,12 +787,14 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = Delay100ms
 </UL>
 <BR>[Called By]<UL><LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;connectingScene
-<LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sendAndWaitConfirmation
-<LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;readValidKey
+<LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;toggleTurn
+<LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sendAndWaitConfirmation
+<LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;readValidKey
 <LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;finalStateDisplay
 </UL>
 
-<P><STRONG><a name="[93]"></a>MSScene</STRONG> (Thumb, 82 bytes, Stack size 8 bytes, userinterface.o(i.MSScene))
+<P><STRONG><a name="[93]"></a>MSScene</STRONG> (Thumb, 80 bytes, Stack size 8 bytes, userinterface.o(i.MSScene))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = MSScene &rArr; getInputKey
 </UL>
 <BR>[Calls]<UL><LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getInputKey
@@ -809,16 +811,17 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Nokia5110_SetCursor
 <LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcdwrite
 </UL>
-<BR>[Called By]<UL><LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;stateScene
-<LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;selectSeedScene
-<LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;selectModeScene
+<BR>[Called By]<UL><LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;stateScene
+<LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;selectSeedScene
+<LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;selectModeScene
 <LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;displaySlaveSeed
 <LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;connectingScene
 <LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MSScene
 </UL>
 
 <P><STRONG><a name="[b2]"></a>Nokia5110_ClearBuffer</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, nokia5110.o(i.Nokia5110_ClearBuffer))
-<BR><BR>[Called By]<UL><LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;welcomeScene
+<BR><BR>[Called By]<UL><LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;winGrid
+<LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;welcomeScene
 <LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drawEmptyGrid
 </UL>
 
@@ -827,8 +830,10 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Nokia5110_DrawFullImage
 </UL>
-<BR>[Called By]<UL><LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;welcomeScene
-<LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drawSeed
+<BR>[Called By]<UL><LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drawInvertedSeed
+<LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;winGrid
+<LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;welcomeScene
+<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drawSeed
 <LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drawEmptyGrid
 </UL>
 
@@ -863,9 +868,9 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Nokia5110_OutChar
 </UL>
-<BR>[Called By]<UL><LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;stateScene
-<LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;selectSeedScene
-<LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;selectModeScene
+<BR>[Called By]<UL><LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;stateScene
+<LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;selectSeedScene
+<LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;selectModeScene
 <LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;displaySlaveSeed
 <LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;connectingScene
 <LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MSScene
@@ -874,8 +879,9 @@ Global Symbols
 <P><STRONG><a name="[b3]"></a>Nokia5110_PrintBMP</STRONG> (Thumb, 420 bytes, Stack size 36 bytes, nokia5110.o(i.Nokia5110_PrintBMP))
 <BR><BR>[Stack]<UL><LI>Max Depth = 36<LI>Call Chain = Nokia5110_PrintBMP
 </UL>
-<BR>[Called By]<UL><LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;welcomeScene
-<LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drawSeed
+<BR>[Called By]<UL><LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drawInvertedSeed
+<LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;welcomeScene
+<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drawSeed
 <LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drawEmptyGrid
 </UL>
 
@@ -884,9 +890,9 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcdwrite
 </UL>
-<BR>[Called By]<UL><LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;stateScene
-<LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;selectSeedScene
-<LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;selectModeScene
+<BR>[Called By]<UL><LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;stateScene
+<LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;selectSeedScene
+<LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;selectModeScene
 <LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;displaySlaveSeed
 <LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;connectingScene
 <LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MSScene
@@ -943,13 +949,14 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TExaS_Init
 </UL>
 
-<P><STRONG><a name="[b7]"></a>UARTInit</STRONG> (Thumb, 126 bytes, Stack size 0 bytes, uarthandler.o(i.UARTInit))
+<P><STRONG><a name="[bd]"></a>UARTInit</STRONG> (Thumb, 126 bytes, Stack size 0 bytes, uarthandler.o(i.UARTInit))
 <BR><BR>[Called By]<UL><LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
 <P><STRONG><a name="[a6]"></a>addSeed</STRONG> (Thumb, 32 bytes, Stack size 0 bytes, connectfour.o(i.addSeed))
 <BR><BR>[Called By]<UL><LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bestMoveP2
 <LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bestMoveP1
+<LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;runSingleMode
 <LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
@@ -979,7 +986,8 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bestMoveP2
 <LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bestMoveP1
 </UL>
-<BR>[Called By]<UL><LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<BR>[Called By]<UL><LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;runSingleMode
+<LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
 <P><STRONG><a name="[ab]"></a>checkGameState</STRONG> (Thumb, 40 bytes, Stack size 8 bytes, connectfour.o(i.checkGameState))
@@ -988,7 +996,12 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;isMovesLeft
 <LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;evaluate
 </UL>
-<BR>[Called By]<UL><LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<BR>[Called By]<UL><LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;runSingleMode
+<LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[c6]"></a>clearRedLed</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, portfdriver.o(i.clearRedLed))
+<BR><BR>[Called By]<UL><LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
 <P><STRONG><a name="[ae]"></a>connectingScene</STRONG> (Thumb, 44 bytes, Stack size 8 bytes, userinterface.o(i.connectingScene))
@@ -1002,6 +1015,10 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
+<P><STRONG><a name="[ba]"></a>delayUs</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, inputhandler.o(i.delayUs))
+<BR><BR>[Called By]<UL><LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getInputKey
+</UL>
+
 <P><STRONG><a name="[b0]"></a>displaySlaveSeed</STRONG> (Thumb, 50 bytes, Stack size 16 bytes, userinterface.o(i.displaySlaveSeed))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = displaySlaveSeed &rArr; Nokia5110_OutString &rArr; Nokia5110_OutChar
 </UL>
@@ -1013,23 +1030,35 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[b1]"></a>drawEmptyGrid</STRONG> (Thumb, 94 bytes, Stack size 16 bytes, userinterface.o(i.drawEmptyGrid))
+<P><STRONG><a name="[b1]"></a>drawEmptyGrid</STRONG> (Thumb, 106 bytes, Stack size 16 bytes, userinterface.o(i.drawEmptyGrid))
 <BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = drawEmptyGrid &rArr; Nokia5110_DisplayBuffer &rArr; Nokia5110_DrawFullImage &rArr; Nokia5110_SetCursor
 </UL>
 <BR>[Calls]<UL><LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Nokia5110_PrintBMP
 <LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Nokia5110_DisplayBuffer
 <LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Nokia5110_ClearBuffer
 </UL>
-<BR>[Called By]<UL><LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<BR>[Called By]<UL><LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;winGrid
+<LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[b4]"></a>drawSeed</STRONG> (Thumb, 122 bytes, Stack size 24 bytes, userinterface.o(i.drawSeed))
+<P><STRONG><a name="[b4]"></a>drawInvertedSeed</STRONG> (Thumb, 122 bytes, Stack size 24 bytes, userinterface.o(i.drawInvertedSeed))
+<BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = drawInvertedSeed &rArr; Nokia5110_DisplayBuffer &rArr; Nokia5110_DrawFullImage &rArr; Nokia5110_SetCursor
+</UL>
+<BR>[Calls]<UL><LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Nokia5110_PrintBMP
+<LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Nokia5110_DisplayBuffer
+</UL>
+<BR>[Called By]<UL><LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;winGrid
+</UL>
+
+<P><STRONG><a name="[b5]"></a>drawSeed</STRONG> (Thumb, 132 bytes, Stack size 24 bytes, userinterface.o(i.drawSeed))
 <BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = drawSeed &rArr; Nokia5110_DisplayBuffer &rArr; Nokia5110_DrawFullImage &rArr; Nokia5110_SetCursor
 </UL>
 <BR>[Calls]<UL><LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Nokia5110_PrintBMP
 <LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Nokia5110_DisplayBuffer
 </UL>
-<BR>[Called By]<UL><LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<BR>[Called By]<UL><LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;winGrid
+<LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;runSingleMode
+<LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
 <P><STRONG><a name="[ad]"></a>evaluate</STRONG> (Thumb, 574 bytes, Stack size 8 bytes, connectfour.o(i.evaluate))
@@ -1039,24 +1068,44 @@ Global Symbols
 <LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;checkGameState
 </UL>
 
-<P><STRONG><a name="[97]"></a>getInputKey</STRONG> (Thumb, 126 bytes, Stack size 32 bytes, inputhandler.o(i.getInputKey))
-<BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = getInputKey
+<P><STRONG><a name="[b6]"></a>finalStateDisplay</STRONG> (Thumb, 52 bytes, Stack size 8 bytes, connectfourmain.o(i.finalStateDisplay))
+<BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = finalStateDisplay &rArr; winGrid &rArr; drawInvertedSeed &rArr; Nokia5110_DisplayBuffer &rArr; Nokia5110_DrawFullImage &rArr; Nokia5110_SetCursor
 </UL>
-<BR>[Called By]<UL><LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;selectSeedScene
-<LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;selectModeScene
-<LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MSScene
-<LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;readValidKey
+<BR>[Calls]<UL><LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;winGrid
+<LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;stateScene
+<LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;genPoint
+<LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Delay100ms
+</UL>
+<BR>[Called By]<UL><LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[be]"></a>heightOf</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, connectfour.o(i.heightOf))
-<BR><BR>[Called By]<UL><LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;validColumn
+<P><STRONG><a name="[b7]"></a>genPoint</STRONG> (Thumb, 462 bytes, Stack size 8 bytes, userinterface.o(i.genPoint))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = genPoint
+</UL>
+<BR>[Called By]<UL><LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;finalStateDisplay
+</UL>
+
+<P><STRONG><a name="[97]"></a>getInputKey</STRONG> (Thumb, 134 bytes, Stack size 32 bytes, inputhandler.o(i.getInputKey))
+<BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = getInputKey
+</UL>
+<BR>[Calls]<UL><LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delayUs
+</UL>
+<BR>[Called By]<UL><LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;selectSeedScene
+<LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;selectModeScene
+<LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MSScene
+<LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;readValidKey
+</UL>
+
+<P><STRONG><a name="[c8]"></a>heightOf</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, connectfour.o(i.heightOf))
+<BR><BR>[Called By]<UL><LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;validColumn
+<LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;runSingleMode
 <LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[b5]"></a>initializeBoard</STRONG> (Thumb, 32 bytes, Stack size 8 bytes, connectfour.o(i.initializeBoard))
+<P><STRONG><a name="[bb]"></a>initializeBoard</STRONG> (Thumb, 32 bytes, Stack size 8 bytes, connectfour.o(i.initializeBoard))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = initializeBoard &rArr; __aeabi_memclr4
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
+<BR>[Calls]<UL><LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 </UL>
 <BR>[Called By]<UL><LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
@@ -1066,46 +1115,53 @@ Global Symbols
 <LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;checkGameState
 </UL>
 
-<P><STRONG><a name="[b8]"></a>keyPadInit</STRONG> (Thumb, 102 bytes, Stack size 0 bytes, inputhandler.o(i.keyPadInit))
+<P><STRONG><a name="[be]"></a>keyPadInit</STRONG> (Thumb, 102 bytes, Stack size 0 bytes, inputhandler.o(i.keyPadInit))
 <BR><BR>[Called By]<UL><LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[8a]"></a>main</STRONG> (Thumb, 1172 bytes, Stack size 0 bytes, connectfourmain.o(i.main))
-<BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = main &rArr; bestPosition &rArr; bestMoveP2 &rArr; minimax &rArr;  minimax (Cycle)
+<P><STRONG><a name="[8a]"></a>main</STRONG> (Thumb, 926 bytes, Stack size 0 bytes, connectfourmain.o(i.main))
+<BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = main &rArr; finalStateDisplay &rArr; winGrid &rArr; drawInvertedSeed &rArr; Nokia5110_DisplayBuffer &rArr; Nokia5110_DrawFullImage &rArr; Nokia5110_SetCursor
 </UL>
-<BR>[Calls]<UL><LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;welcomeScene
-<LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;stateScene
-<LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;send
-<LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;selectSeedScene
-<LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;selectModeScene
-<LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;receive
-<LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;portFInit
-<LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;keyPadInit
-<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;initializeBoard
-<LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;heightOf
-<LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drawSeed
+<BR>[Calls]<UL><LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;welcomeScene
+<LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;toggleRedLed
+<LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setRedLed
+<LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setGreenLed
+<LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setBlueLed
+<LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;send
+<LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;selectSeedScene
+<LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;selectModeScene
+<LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;receive
+<LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;portFInit
+<LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;keyPadInit
+<LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;initializeBoard
+<LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;heightOf
+<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drawSeed
 <LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drawEmptyGrid
 <LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;displaySlaveSeed
 <LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;connectingScene
+<LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;clearRedLed
 <LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;checkGameState
 <LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bestPosition
 <LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;addSeed
-<LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UARTInit
+<LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UARTInit
 <LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NokiaInit
 <LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MSScene
 <LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Delay100ms
-<LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;validColumn
-<LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sendAndWaitConfirmation
-<LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;readValidKey
+<LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;validColumn
+<LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;toggleTurn
+<LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sendAndWaitConfirmation
+<LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;runSingleMode
+<LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;readValidKey
+<LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;finalStateDisplay
 </UL>
 <BR>[Called By]<UL><LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_entry_main
 </UL>
 
-<P><STRONG><a name="[c4]"></a>max</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, connectfour.o(i.max))
+<P><STRONG><a name="[d0]"></a>max</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, connectfour.o(i.max))
 <BR><BR>[Called By]<UL><LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;minimax
 </UL>
 
-<P><STRONG><a name="[c5]"></a>min</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, connectfour.o(i.min))
+<P><STRONG><a name="[d1]"></a>min</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, connectfour.o(i.min))
 <BR><BR>[Called By]<UL><LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;minimax
 </UL>
 
@@ -1114,8 +1170,8 @@ Global Symbols
 <LI>Call Chain = minimax &rArr;  minimax (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;minimax
-<LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;min
-<LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;max
+<LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;min
+<LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;max
 <LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;isMovesLeft
 <LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;evaluate
 </UL>
@@ -1124,24 +1180,25 @@ Global Symbols
 <LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bestMoveP1
 </UL>
 
-<P><STRONG><a name="[b9]"></a>portFInit</STRONG> (Thumb, 88 bytes, Stack size 8 bytes, portfdriver.o(i.portFInit))
+<P><STRONG><a name="[bf]"></a>portFInit</STRONG> (Thumb, 88 bytes, Stack size 8 bytes, portfdriver.o(i.portFInit))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = portFInit
 </UL>
 <BR>[Called By]<UL><LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[bd]"></a>readValidKey</STRONG> (Thumb, 36 bytes, Stack size 8 bytes, connectfourmain.o(i.readValidKey))
+<P><STRONG><a name="[c7]"></a>readValidKey</STRONG> (Thumb, 36 bytes, Stack size 8 bytes, connectfourmain.o(i.readValidKey))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = readValidKey &rArr; getInputKey
 </UL>
 <BR>[Calls]<UL><LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getInputKey
 <LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Delay100ms
-<LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;validColumn
+<LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;validColumn
 </UL>
-<BR>[Called By]<UL><LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<BR>[Called By]<UL><LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;runSingleMode
+<LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[c2]"></a>receive</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, uarthandler.o(i.receive))
-<BR><BR>[Called By]<UL><LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sendAndWaitConfirmation
+<P><STRONG><a name="[ca]"></a>receive</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, uarthandler.o(i.receive))
+<BR><BR>[Called By]<UL><LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sendAndWaitConfirmation
 <LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
@@ -1150,7 +1207,21 @@ Global Symbols
 <LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bestMoveP1
 </UL>
 
-<P><STRONG><a name="[bb]"></a>selectModeScene</STRONG> (Thumb, 68 bytes, Stack size 8 bytes, userinterface.o(i.selectModeScene))
+<P><STRONG><a name="[c3]"></a>runSingleMode</STRONG> (Thumb, 180 bytes, Stack size 8 bytes, connectfourmain.o(i.runSingleMode))
+<BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = runSingleMode &rArr; bestPosition &rArr; bestMoveP2 &rArr; minimax &rArr;  minimax (Cycle)
+</UL>
+<BR>[Calls]<UL><LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;heightOf
+<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drawSeed
+<LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;checkGameState
+<LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bestPosition
+<LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;addSeed
+<LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;toggleTurn
+<LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;readValidKey
+</UL>
+<BR>[Called By]<UL><LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[c1]"></a>selectModeScene</STRONG> (Thumb, 68 bytes, Stack size 8 bytes, userinterface.o(i.selectModeScene))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = selectModeScene &rArr; getInputKey
 </UL>
 <BR>[Calls]<UL><LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getInputKey
@@ -1161,7 +1232,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[bc]"></a>selectSeedScene</STRONG> (Thumb, 92 bytes, Stack size 8 bytes, userinterface.o(i.selectSeedScene))
+<P><STRONG><a name="[c2]"></a>selectSeedScene</STRONG> (Thumb, 92 bytes, Stack size 8 bytes, userinterface.o(i.selectSeedScene))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = selectSeedScene &rArr; getInputKey
 </UL>
 <BR>[Calls]<UL><LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getInputKey
@@ -1172,41 +1243,73 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[c1]"></a>send</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, uarthandler.o(i.send))
-<BR><BR>[Called By]<UL><LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sendAndWaitConfirmation
+<P><STRONG><a name="[c9]"></a>send</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, uarthandler.o(i.send))
+<BR><BR>[Called By]<UL><LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sendAndWaitConfirmation
 <LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[c0]"></a>sendAndWaitConfirmation</STRONG> (Thumb, 34 bytes, Stack size 16 bytes, connectfourmain.o(i.sendAndWaitConfirmation))
-<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = sendAndWaitConfirmation &rArr; Delay100ms
+<P><STRONG><a name="[c4]"></a>sendAndWaitConfirmation</STRONG> (Thumb, 36 bytes, Stack size 8 bytes, connectfourmain.o(i.sendAndWaitConfirmation))
+<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = sendAndWaitConfirmation &rArr; Delay100ms
 </UL>
-<BR>[Calls]<UL><LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;send
-<LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;receive
+<BR>[Calls]<UL><LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;toggleBlueLed
+<LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setGreenLed
+<LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;send
+<LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;receive
 <LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Delay100ms
 </UL>
 <BR>[Called By]<UL><LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[bf]"></a>stateScene</STRONG> (Thumb, 84 bytes, Stack size 16 bytes, userinterface.o(i.stateScene))
-<BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = stateScene &rArr; Nokia5110_OutString &rArr; Nokia5110_OutChar
+<P><STRONG><a name="[cf]"></a>setBlueLed</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, portfdriver.o(i.setBlueLed))
+<BR><BR>[Called By]<UL><LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[ce]"></a>setGreenLed</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, portfdriver.o(i.setGreenLed))
+<BR><BR>[Called By]<UL><LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sendAndWaitConfirmation
+<LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[c5]"></a>setRedLed</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, portfdriver.o(i.setRedLed))
+<BR><BR>[Called By]<UL><LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[b9]"></a>stateScene</STRONG> (Thumb, 90 bytes, Stack size 24 bytes, userinterface.o(i.stateScene))
+<BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = stateScene &rArr; Nokia5110_OutString &rArr; Nokia5110_OutChar
 </UL>
 <BR>[Calls]<UL><LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Nokia5110_SetCursor
 <LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Nokia5110_OutString
 <LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Nokia5110_Clear
 </UL>
-<BR>[Called By]<UL><LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<BR>[Called By]<UL><LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;finalStateDisplay
 </UL>
 
-<P><STRONG><a name="[c3]"></a>validColumn</STRONG> (Thumb, 36 bytes, Stack size 8 bytes, connectfourmain.o(i.validColumn))
-<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = validColumn
+<P><STRONG><a name="[d2]"></a>toggleBlueLed</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, portfdriver.o(i.toggleBlueLed))
+<BR><BR>[Called By]<UL><LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sendAndWaitConfirmation
 </UL>
-<BR>[Calls]<UL><LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;heightOf
+
+<P><STRONG><a name="[cd]"></a>toggleRedLed</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, portfdriver.o(i.toggleRedLed))
+<BR><BR>[Called By]<UL><LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
-<BR>[Called By]<UL><LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;readValidKey
+
+<P><STRONG><a name="[cc]"></a>toggleTurn</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, connectfourmain.o(i.toggleTurn))
+<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = toggleTurn &rArr; Delay100ms
+</UL>
+<BR>[Calls]<UL><LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Delay100ms
+</UL>
+<BR>[Called By]<UL><LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;runSingleMode
 <LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[ba]"></a>welcomeScene</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, userinterface.o(i.welcomeScene))
+<P><STRONG><a name="[cb]"></a>validColumn</STRONG> (Thumb, 36 bytes, Stack size 8 bytes, connectfourmain.o(i.validColumn))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = validColumn
+</UL>
+<BR>[Calls]<UL><LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;heightOf
+</UL>
+<BR>[Called By]<UL><LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;readValidKey
+<LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[c0]"></a>welcomeScene</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, userinterface.o(i.welcomeScene))
 <BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = welcomeScene &rArr; Nokia5110_DisplayBuffer &rArr; Nokia5110_DrawFullImage &rArr; Nokia5110_SetCursor
 </UL>
 <BR>[Calls]<UL><LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Nokia5110_PrintBMP
@@ -1214,6 +1317,18 @@ Global Symbols
 <LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Nokia5110_ClearBuffer
 </UL>
 <BR>[Called By]<UL><LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[b8]"></a>winGrid</STRONG> (Thumb, 160 bytes, Stack size 16 bytes, userinterface.o(i.winGrid))
+<BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = winGrid &rArr; drawInvertedSeed &rArr; Nokia5110_DisplayBuffer &rArr; Nokia5110_DrawFullImage &rArr; Nokia5110_SetCursor
+</UL>
+<BR>[Calls]<UL><LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drawInvertedSeed
+<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drawSeed
+<LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;drawEmptyGrid
+<LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Nokia5110_DisplayBuffer
+<LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Nokia5110_ClearBuffer
+</UL>
+<BR>[Called By]<UL><LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;finalStateDisplay
 </UL>
 <P>
 <H3>

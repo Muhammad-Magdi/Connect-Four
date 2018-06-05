@@ -4,7 +4,7 @@
 <h1>µVision Build Log</h1>
 <h2>Project:</h2>
 E:\Learning\Faculty\Third year\Second Term\ConnectFour\ConnectFour.uvproj
-Project File Date:  06/04/2018
+Project File Date:  06/05/2018
 
 <h2>Output:</h2>
 Build target 'ConncetFour'
@@ -57,74 +57,29 @@ PortFDriver.h(42): warning:  #1295-D: Deprecated declaration isSw2LongPressed - 
   int isSw2LongPressed();
 PortFDriver.h(44): warning:  #1-D: last line of file ends without a newline
   #endif
-ConnectFourMain.c(172): warning:  #1-D: last line of file ends without a newline
-  }
-ConnectFourMain.c: 25 warnings, 0 errors
+ConnectFourMain.c: 24 warnings, 0 errors
 compiling UserInterface.c...
-compiling ConnectFour.c...
-ConnectFour.c(180): warning:  #1-D: last line of file ends without a newline
+UserInterface.c(319): warning:  #177-D: variable "Seed" was declared but never referenced
+        const unsigned char *Seed ;
+UserInterface.c(386): warning:  #1-D: last line of file ends without a newline
   }
-ConnectFour.c: 1 warning, 0 errors
+UserInterface.c: 2 warnings, 0 errors
 linking...
-Program Size: Code=7500 RO-data=2968 RW-data=108 ZI-data=1756  
+Program Size: Code=8540 RO-data=3192 RW-data=124 ZI-data=1804  
 ".\ConnectFour.axf" - 0 Error(s), 26 Warning(s).
+Load "E:\\Learning\\Faculty\\Third year\\Second Term\\ConnectFour\\ConnectFour.axf" 
+Connecting: Mode=JTAG, Speed=1000000Hz
+Erase Done.
+Programming Done.
+Verify OK.
 </pre>
 </body>
 </html>
- Deprecated declaration setRedLed - give arg types
-  void setRedLed();
-PortFDriver.h(19): warning:  #1295-D: Deprecated declaration clearRedLed - give arg types
-  void clearRedLed();
-PortFDriver.h(20): warning:  #1295-D: Deprecated declaration toggleRedLed - give arg types
-  void toggleRedLed();
-PortFDriver.h(21): warning:  #1295-D: Deprecated declaration setBlueLed - give arg types
-  void setBlueLed();
-PortFDriver.h(22): warning:  #1295-D: Deprecated declaration clearBlueLed - give arg types
-  void clearBlueLed();
-PortFDriver.h(23): warning:  #1295-D: Deprecated declaration toggleBlueLed - give arg types
-  void toggleBlueLed();
-PortFDriver.h(24): warning:  #1295-D: Deprecated declaration setGreenLed - give arg types
-  void setGreenLed();
-PortFDriver.h(25): warning:  #1295-D: Deprecated declaration clearGreenLed - give arg types
-  void clearGreenLed();
-PortFDriver.h(26): warning:  #1295-D: Deprecated declaration toggleGreenLed - give arg types
-  void toggleGreenLed();
-PortFDriver.h(27): warning:  #1295-D: Deprecated declaration setYellowLed - give arg types
-  void setYellowLed();
-PortFDriver.h(28): warning:  #1295-D: Deprecated declaration clearYellowLed - give arg types
-  void clearYellowLed();
-PortFDriver.h(29): warning:  #1295-D: Deprecated declaration toggleYellowLed - give arg types
-  void toggleYellowLed();
-PortFDriver.h(33): warning:  #1295-D: Deprecated declaration getRedLed - give arg types
-  int getRedLed();
-PortFDriver.h(34): warning:  #1295-D: Deprecated declaration getYellowLed - give arg types
-  int getYellowLed();
-PortFDriver.h(35): warning:  #1295-D: Deprecated declaration getBlueLed - give arg types
-  int getBlueLed();
-PortFDriver.h(36): warning:  #1295-D: Deprecated declaration getGreenLed - give arg types
-  int getGreenLed();
-PortFDriver.h(37): warning:  #1295-D: Deprecated declaration isSw1Pressed - give arg types
-  int isSw1Pressed();
-PortFDriver.h(38): warning:  #1295-D: Deprecated declaration isSw1ShortPressed - give arg types
-  int isSw1ShortPressed();
-PortFDriver.h(39): warning:  #1295-D: Deprecated declaration isSw1LongPressed - give arg types
-  int isSw1LongPressed();
-PortFDriver.h(40): warning:  #1295-D: Deprecated declaration isSw2Pressed - give arg types
-  int isSw2Pressed();
-PortFDriver.h(41): warning:  #1295-D: Deprecated declaration isSw2ShortPressed - give arg types
-  int isSw2ShortPressed();
-PortFDriver.h(42): warning:  #1295-D: Deprecated declaration isSw2LongPressed - give arg types
-  int isSw2LongPressed();
-PortFDriver.h(44): warning:  #1-D: last line of file ends without a newline
-  #endif
-InputHandler.c: 24 warnings, 0 errors
-compiling ConnectFour.c...
-ConnectFour.c(180): warning:  #1-D: last line of file ends without a newline
-  }
-ConnectFour.c: 1 warning, 0 errors
-linking...
-.\ConnectFour.axf: Error: L6218E: Undefined symbol getValidKey (referred from connectfourmain.o).
-Not enough information to list image symbols.
-Finished: 1 information, 0 warning and 1 error messages.
-".\ConnectFour.axf" - 1 Error(s), 51 Warning(s).
+
+gameGrid" is undefined
+                        if(gameGrid[i][j]=='X')  drawSeed('X',j,i);
+UserInterface.c(317): warning:  #177-D: variable "Seed" was declared but never referenced
+        const unsigned char *Seed ;
+UserInterface.c: 2 warnings, 3 errors
+".\ConnectFour.axf" - 4 Error(s), 26 Warning(s).
 Target not created

@@ -24,4 +24,5 @@ void initializeBoard(void);
 int heightOf(int);
 
 void removeSeed(int);
+
 #endif

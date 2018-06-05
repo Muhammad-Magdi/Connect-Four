@@ -1,11 +1,12 @@
 #ifndef USER_INTERFACE_H
 #define USER_INTERFACE_H
 
+#include "ConnectFour.h"
+
 //************************display functions**********************
 
 //nokia init
 void NokiaInit (void);
-
 
 void welcomeScene (void);
 
@@ -45,5 +46,15 @@ void displaySlaveSeed (unsigned short turn) ;
 
 // time delay in 0.1 seconds
 void Delay100ms(unsigned long count); 
+
+void drawInvertedSeed(char seed, int col ,int row);
+
+void winGrid (void);
+
+void fullGrid (void);
+
+void winScene (void);
+
+void genPoint(void);
 
 #endif
