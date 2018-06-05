@@ -3,7 +3,7 @@
 .\connectfourmain.o: TExaS.h
 .\connectfourmain.o: Nokia5110.h
 .\connectfourmain.o: UARTHandler.h
+.\connectfourmain.o: PortFDriver.h
 .\connectfourmain.o: InputHandler.h
 .\connectfourmain.o: ConnectFour.h
 .\connectfourmain.o: UserInterface.h
-.\connectfourmain.o: C:\Keil\ARM\ARMCC\bin\..\include\string.h

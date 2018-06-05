@@ -445,6 +445,11 @@
               <FileType>1</FileType>
               <FilePath>.\ConnectFour.c</FilePath>
             </File>
+            <File>
+              <FileName>PortFDriver.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\PortFDriver.c</FilePath>
+            </File>
           </Files>
         </Group>
       </Groups>

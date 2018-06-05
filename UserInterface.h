@@ -1,8 +1,6 @@
 #ifndef USER_INTERFACE_H
 #define USER_INTERFACE_H
 
-#include "ConnectFour.h"
-
 //************************display functions**********************
 
 //nokia init
@@ -40,7 +38,7 @@ void waitingScene(void);
 void connectingScene(void);
 
 //Prints a screen with the given game state
-void stateScene(GameState gameState);
+void stateScene(GameState gameState, char seed);
 
 //"You are player 1"
 void displaySlaveSeed (unsigned short turn) ;

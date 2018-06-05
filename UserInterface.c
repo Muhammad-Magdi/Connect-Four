@@ -1,9 +1,9 @@
 #include "tm4c123gh6pm.h"
 #include "TExaS.h"
+#include "ConnectFour.h"
 #include "UserInterface.h"
 #include "Nokia5110.h"
 #include "InputHandler.h"
-#include "ConnectFour.h"
 
 // *************************** Images ***************************
 
@@ -111,7 +111,7 @@ int selectModeScene (void)
 	do{
 		PlayerTurn = getInputKey();
 	}while(PlayerTurn > '2' || PlayerTurn < '1');
-	return PlayerTurn - '0';
+	return PlayerTurn - 0x30;
 }
 
 char selectSeedScene(void)
@@ -164,7 +164,7 @@ int MSScene (void)
 	do{
 		PlayerRole = getInputKey();
 	}while(PlayerRole > '2' || PlayerRole < '1');
-	return PlayerRole ;
+	return PlayerRole - 0x30 ;
 }
 
 void displaySlaveSeed (unsigned short turn) 
@@ -178,23 +178,22 @@ void displaySlaveSeed (unsigned short turn)
 	Nokia5110_OutChar(t);
 }
 
-void stateScene(enum GameState gameState)
+void stateScene(enum GameState gameState, char PlayerSeed)
 {
-	unsigned short state = gameState;
 	char* statement;
 
 	Nokia5110_Clear();
-	if ((state==0&&PlayerSeed=='X') || (state==1&&PlayerSeed=='O'))
+	if ((gameState==P1WIN&&PlayerSeed=='X') || (gameState==P2WIN&&PlayerSeed=='O'))
 	{
 		Nokia5110_SetCursor (2,2);
 		statement = "YOU WIN";
 	}
-	else if  ((state==0&&PlayerSeed=='O') || (state==1&&PlayerSeed=='X'))
+	else if  ((gameState==P1WIN&&PlayerSeed=='O') || (gameState==P2WIN&&PlayerSeed=='X'))
 	{
 		Nokia5110_SetCursor (1,2);
 		statement = "YOU  LOSE";
 	}
-	else if (state==2)
+	else if (gameState==TIE)
 	{
 		Nokia5110_SetCursor (4,2);
 		statement = "TIE";
